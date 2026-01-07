@@ -1,0 +1,6 @@
+# Make all .ts and .tsx files use LF in the repo
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
