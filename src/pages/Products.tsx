@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Navigation from "@/components/Layout/Navigation";
-import LanguageToggle from "@/components/Layout/LanguageToggle";
+import Navigation from "@/components/layout/Navigation";
+import LanguageToggle from "@/components/layout/LanguageToggle";
 import { Button } from "@/components/ui/button";
 import {
   Card,

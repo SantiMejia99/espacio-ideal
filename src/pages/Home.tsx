@@ -1,8 +1,8 @@
 import { ChevronDown } from "lucide-react";
-import Hero from "@/components/Layout/Hero";
-import LanguageToggle from "@/components/Layout/LanguageToggle";
-import LocalTime from "@/components/Layout/LocalTime";
-import ProjectAccordion from "@/components/Layout/ProjectAccordion";
+import Hero from "@/components/layout/Hero";
+import LanguageToggle from "@/components/layout/LanguageToggle";
+import LocalTime from "@/components/layout/LocalTime";
+import ProjectAccordion from "@/components/layout/ProjectAccordion";
 
 interface HomeProps {
   language: "EN" | "ES";
