@@ -27,3 +27,5 @@ function App() {
 }
 
 export default App;
+
+// Trigger clean deploy on Vercel
