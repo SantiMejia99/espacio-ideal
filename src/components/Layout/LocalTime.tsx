@@ -8,7 +8,7 @@ const LocalTime = () => {
       const now = new Date();
       const caliTime = now.toLocaleTimeString("en-US", {
         timeZone: "America/Bogota",
-        hour12: false,
+        hour12: true,
         hour: "2-digit",
         minute: "2-digit",
       });

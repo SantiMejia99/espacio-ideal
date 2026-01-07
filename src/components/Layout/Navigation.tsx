@@ -78,10 +78,11 @@ const Navigation = ({ language }: NavigationProps) => {
   };
 
   return (
-    <nav className="fixed top-8 left-8 right-8 z-50 px-8 py-6 bg-white/95 backdrop-blur-sm rounded-lg">
-      <div className="flex justify-between items-start">
+    <nav className="fixed top-8 left-0 right-0 mx-8 z-50 px-8 py-6 bg-transparent">
+      {" "}
+      <div className="flex items-start w-full">
         {/* Left Side - Logo and Description */}
-        <div className="flex gap-8">
+        <div className="flex gap-8 items-start">
           {/* Logo */}
           <Link to="/" className="hover:opacity-60 transition-opacity">
             <img
@@ -92,7 +93,7 @@ const Navigation = ({ language }: NavigationProps) => {
           </Link>
 
           {/* Description Text */}
-          <div className="text-sm gap-4 text-black">
+          <div className="text-sm gap-4 text-black  leading-none! ">
             <span>
               {description[language].leading} {description[language].detail}
             </span>
@@ -104,52 +105,52 @@ const Navigation = ({ language }: NavigationProps) => {
         </div>
 
         {/* Right Side - Navigation Menu */}
-        <NavigationMenu>
-          <NavigationMenuList className="flex gap-8">
-            {/* Home */}
-            <NavigationMenuItem>
-              <Link to="/">
-                <NavigationMenuLink className="text-sm font-normal hover:opacity-60 transition-opacity bg-transparent">
-                  {nav[language].home}
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
+        <div className="ml-auto flex gap-8 text-sm font-normal bg-transparent hover:bg-transparent hover:opacity-60 data-[state=open]:bg-transparent leading-none! ">
+          {/* Home */}
+          <Link
+            to="/"
+            className="text-sm font-normal bg-transparent hover:bg-transparent hover:opacity-60 data-[state=open]:bg-transparent p-0! h-auto! leading-none! items-baseline! justify-start!"
+          >
+            {nav[language].home}
+          </Link>
 
-            {/* Products Dropdown */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm font-normal bg-transparent hover:bg-transparent hover:opacity-60 data-[state=open]:bg-transparent p-0 h-auto">
-                {nav[language].products}
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-600 gap-3 p-4">
-                  {products[language].map((product) => (
-                    <li key={product.href}>
-                      <Link to={product.href}>
-                        <NavigationMenuLink className="text-sm font-normal hover:opacity-60 transition-opacity bg-transparent">
-                          <div className="text-sm font-normal leading-none">
-                            {product.title}
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            {product.description}
-                          </p>
-                        </NavigationMenuLink>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
+          {/* Products Dropdown */}
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-sm font-normal bg-transparent hover:bg-transparent hover:opacity-60 data-[state=open]:bg-transparent p-0! h-auto! leading-none! items-baseline! justify-start!">
+                  {nav[language].products}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-600 gap-3 p-4">
+                    {products[language].map((product) => (
+                      <li key={product.href}>
+                        <Link to={product.href}>
+                          <NavigationMenuLink className="text-sm font-normal hover:opacity-60 transition-opacity bg-transparent">
+                            <div className="text-sm font-normal leading-none">
+                              {product.title}
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              {product.description}
+                            </p>
+                          </NavigationMenuLink>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
-            {/* About */}
-            <NavigationMenuItem>
-              <Link to="/about">
-                <NavigationMenuLink className="text-sm font-normal hover:opacity-60 transition-opacity bg-transparent">
-                  {nav[language].about}
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+          {/* About */}
+          <Link
+            to="/about"
+            className="text-sm font-normal hover:opacity-60 transition-opacity leading-none"
+          >
+            {nav[language].about}
+          </Link>
+        </div>
       </div>
     </nav>
   );

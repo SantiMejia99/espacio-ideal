@@ -1,0 +1,74 @@
+[
+  {
+    "client": "Expresso Bolivariano",
+    "collaborator": "Terminal de Transporte de Cali",
+    "case": "Oficina Administrativas",
+    "year": 2023
+  },
+  {
+    "client": "Business Center",
+    "collaborator": "Business Center de Cali",
+    "case": "Oficina Gerenciales",
+    "year": 2022
+  },
+  {
+    "client": "Bego Ingeniería",
+    "collaborator": "Oficinas Gerencias Isan",
+    "case": "Oficina Administrativas",
+    "year": 2023
+  },
+  {
+    "client": "Coomotor",
+    "collaborator": "Terminal de Transporte de Cali",
+    "case": "Lobby VIP",
+    "year": 2024
+  },
+  {
+    "client": "Marval",
+    "collaborator": "Oficinas de Transporte",
+    "case": "Oficina Administrativas",
+    "year": 2021
+  },
+  {
+    "client": "Camara de Comercio",
+    "collaborator": "Ciudad de Santander de Quilichao",
+    "case": "Oficina Gubernamentale",
+    "year": 2023
+  },
+  {
+    "client": "Entrada Sede Principal",
+    "collaborator": "Banco de Occidente",
+    "case": "Vestíbulo Financiero",
+    "year": 2024
+  },
+  {
+    "client": "Ingenio Mayaguez",
+    "collaborator": "Centro Comercial Mayaguez",
+    "case": "Espacio Comercial",
+    "year": 2023
+  },
+  {
+    "client": "Consultorio San Fernando",
+    "collaborator": "Edificio San Fernando",
+    "case": "Consultorio Odontologico",
+    "year": 2023
+  },
+  {
+    "client": "Centro de Conferencias Universidad Autonoma",
+    "collaborator": "Universidad Autonoma de Occidente",
+    "case": "Mesa de Negocios",
+    "year": 2025
+  },
+  {
+    "client": "Apartamentos Umbría Garden",
+    "collaborator": "Umbría Garden",
+    "case": "Diseño de Apartamento",
+    "year": 2023
+  },
+  {
+    "client": "Reserva del Río",
+    "collaborator": "Río Pance",
+    "case": "Diseño de Espacio Interior",
+    "year": 2022
+  }
+]

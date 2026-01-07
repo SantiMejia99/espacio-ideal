@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const Hero = () => {
   const chairRef = useRef<HTMLDivElement>(null);
   const heroTextRef = useRef<HTMLDivElement>(null);
-  const [language, setLanguage] = useState<"EN" | "ES">("EN");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -18,6 +17,7 @@ const Hero = () => {
       });
 
       if (chairRef.current) {
+        // Chair initial animation
         gsap.from(chairRef.current, {
           scale: 0.8,
           opacity: 0,
@@ -26,6 +26,7 @@ const Hero = () => {
           delay: 0.5,
         });
 
+        // Chair floating animation (Y-axis)
         gsap.to(chairRef.current, {
           y: -20,
           duration: 2,
@@ -34,6 +35,7 @@ const Hero = () => {
           ease: "power1.inOut",
         });
 
+        // Chair rotation animation
         gsap.to(chairRef.current, {
           rotation: 3,
           duration: 3,
@@ -48,49 +50,38 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen h-screen w-full flex items-center justify-center px-8">
-      {/* Language Switch */}
-      <div className="absolute top-8 right-8 flex items-center gap-6 text-sm font-semibold">
-        <button
-          onClick={() => setLanguage("EN")}
-          className={`transition-colors duration-300 ${
-            language === "EN" ? "text-white" : "text-black"
-          }`}
+    <section className="relative min-h-screen h-screen w-full flex items-center justify-center">
+      {/* Container with same mx-16 as ProjectAccordion */}
+      <div className="mx-16 w-full">
+        {/* Integrated Hero Title with Image */}
+        <div
+          ref={heroTextRef}
+          className="flex items-center justify-center w-full"
         >
-          EN
-        </button>
+          <h1 className="font-bold tracking-tight leading-none inline-flex items-center justify-center whitespace-nowrap text-[min(18vw,calc((100vw-8rem)*0.22))]">
+            {/* Text Part 1: ESP */}
+            <span className="inline-block">ESP</span>
 
-        <button
-          onClick={() => setLanguage("ES")}
-          className={`transition-colors duration-300 ${
-            language === "ES" ? "text-white" : "text-black"
-          }`}
-        >
-          ES
-        </button>
-      </div>
+            {/* Chair Image */}
+            <span
+              ref={chairRef}
+              className="inline-flex items-center justify-center shrink-0 mx-[min(2vw,calc((100vw-8rem)*0.025))]"
+            >
+              <img
+                src="/Temporary/placeholder-chair.png"
+                alt="Wassily Chair"
+                className="h-[min(23vw,calc((100vw-8rem)*0.3))] w-auto object-contain drop-shadow-2xl"
+                style={{ transformOrigin: "center center" }}
+              />
+            </span>
 
-      {/* Hero Text */}
-      <div ref={heroTextRef} className="text-center relative z-10">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none">
-          <div className="overflow-hidden">
-            <div>ESPACIO</div>
-          </div>
-        </h1>
-      </div>
-
-      {/* Chair Image */}
-      <div
-        ref={chairRef}
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1503602642458-232111445657?w=400&h=300&fit=crop"
-          alt="Wassily Chair"
-          className="w-64 md:w-96 h-auto object-contain drop-shadow-2xl"
-        />
+            {/* Text Part 2: CIO */}
+            <span className="inline-block">CIO</span>
+          </h1>
+        </div>
       </div>
     </section>
   );
 };
+
 export default Hero;
