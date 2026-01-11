@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
+import Footer from "./components/Footer";
 
 function App() {
   const [language, setLanguage] = useState<"EN" | "ES">("EN");
@@ -22,6 +23,9 @@ function App() {
         <Route path="/products/:category" element={<Products />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+      {/* Navigation fixed across all pages */}
+      <Footer language={language} />
     </Router>
   );
 }
