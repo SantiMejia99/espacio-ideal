@@ -1,0 +1,56 @@
+{
+  "EN": {
+    "tagline": "Creating thoughtful, forward-thinking spaces",
+    "navigation": {
+      "aboutUs": "About Us",
+      "approach": "Approach",
+      "expertise": "Expertise",
+      "projects": "Projects",
+      "sustainability": "Sustainability",
+      "careers": "Careers",
+      "news": "News"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "contact": {
+      "cali": "CALI",
+      "address": "Carrera 20A. No.23-70, Cali, Colombia",
+      "phone": "+57 310 425 1070"
+    },
+    "footer": {
+      "cookiePreferences": "Cookie Preferences",
+      "privacyPolicy": "Privacy Policy",
+      "websiteBy": "Website by",
+      "designBy": "Sago Made"
+    }
+  },
+  "ES": {
+    "tagline": "Creando espacios reflexivos y con visión de futuro",
+    "navigation": {
+      "aboutUs": "Sobre Nosotros",
+      "approach": "Enfoque",
+      "expertise": "Experiencia",
+      "projects": "Proyectos",
+      "sustainability": "Sostenibilidad",
+      "careers": "Carreras",
+      "news": "Noticias"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "contact": {
+      "cali": "CALI",
+      "address": "Carrera 20A. No.23-70, Cali, Colombia",
+      "phone": "+57 310 425 1070"
+    },
+    "footer": {
+      "cookiePreferences": "Preferencias de Cookies",
+      "privacyPolicy": "Política de Privacidad",
+      "websiteBy": "Sitio web por",
+      "designBy": "Sago Made"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import navigationInfo from "@/pages/info/navigationInfo.json";
 
 interface NavigationProps {
   language: "EN" | "ES";
@@ -8,31 +9,9 @@ interface NavigationProps {
 const Navigation = ({ language }: NavigationProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const nav = {
-    EN: {
-      home: "HOME",
-      about: "ABOUT US",
-      contact: "CONTACT US",
-    },
-    ES: {
-      home: "INICIO",
-      about: "SOBRE NOSOTROS",
-      contact: "CONTÁCTANOS",
-    },
-  };
-
-  const description = {
-    EN: {
-      leading: "LEADING ARCHITECTURE FIRM, SPECIALIZING ON",
-      detail: "DETAIL AND EXPERIENCE.",
-      location: "CALI, COLOMBIA",
-    },
-    ES: {
-      leading: "FIRMA DE ARQUITECTURA LÍDER ESPECIALIZADA EN",
-      detail: "DETALLE Y EXPERIENCIA.",
-      location: "CALI, COLOMBIA",
-    },
-  };
+  // Use the imported JSON data
+  const nav = navigationInfo.nav;
+  const description = navigationInfo.description;
 
   return (
     <>

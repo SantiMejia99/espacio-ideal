@@ -1,32 +1,35 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { LanguageProvider, useLanguage } from "@/components/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 
-function App() {
-  const [language, setLanguage] = useState<"EN" | "ES">("EN");
+function AppRoutes() {
+  const { language } = useLanguage();
 
   return (
-    <Router>
-      {/* Navigation fixed across all pages */}
+    <>
       <Navigation language={language} />
-
       <Routes>
-        <Route
-          path="/"
-          element={<Home language={language} setLanguage={setLanguage} />}
-        />
+        <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:category" element={<Products />} />
         <Route path="/about" element={<About />} />
       </Routes>
-
-      {/* Navigation fixed across all pages */}
       <Footer language={language} />
-    </Router>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <Router>
+        <AppRoutes />
+      </Router>
+    </LanguageProvider>
   );
 }
 

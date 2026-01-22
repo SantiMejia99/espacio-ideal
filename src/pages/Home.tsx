@@ -1,36 +1,45 @@
-import { ChevronDown } from "lucide-react";
-import Hero from "@/components/layout/Hero";
-import LanguageToggle from "@/components/layout/LanguageToggle";
-import LocalTime from "@/components/layout/LocalTime";
+import { useState } from "react";
+import Navigation from "@/components/Navigation";
+import BottomHome from "@/components/layout/BottomHome";
 import ProjectAccordion from "@/components/layout/ProjectAccordion";
+import ThreeDHero from "@/components/layout/ThreeDHero";
 
-interface HomeProps {
-  language: "EN" | "ES";
-  setLanguage: (lang: "EN" | "ES") => void;
-}
+const Home = () => {
+  const [language, setLanguage] = useState<"EN" | "ES">("EN");
 
-const Home = ({ language, setLanguage }: HomeProps) => {
   const toggleLanguage = () => {
-    setLanguage(language === "EN" ? "ES" : "EN");
+    setLanguage((prev) => (prev === "EN" ? "ES" : "EN"));
   };
 
   return (
-    <div className="min-h-screen w-full bg-white">
-      {/* Hero Section - Now starts at top */}
-      <Hero />
-
-      {/* Bottom Section - Fixed */}
-      <div className="fixed bottom-8 left-8 right-8 px-8 z-40">
-        <div className="flex justify-between items-end text-xs">
-          <LocalTime />
-
-          <div className="flex flex-col items-center animate-bounce cursor-pointer">
-            <ChevronDown className="w-8 h-8" />
+    <div className="min-h-screen bg-white">
+      {/* Main Content */}
+      <main>
+        {/* Navigation */}
+        <Navigation language={language} />
+        {/* Hero Section - Add your hero content here */}
+        <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 mx-0 sm:mx-8">
+          {/* Project Section */}
+          <ThreeDHero />
+          <div className="text-center">
+            <h1 className="text-6xl font-bold mb-6">
+              {language === "EN"
+                ? "Welcome to Espacio Ideal"
+                : "Bienvenido a Espacio Ideal"}
+            </h1>
+            <p className="text-xl text-neutral-600">
+              {language === "EN"
+                ? "Creating thoughtful, forward-thinking spaces"
+                : "Creando espacios reflexivos y con visión de futuro"}
+            </p>
           </div>
+        </section>
 
-          <LanguageToggle language={language} onToggle={toggleLanguage} />
-        </div>
-      </div>
+        {/* Add more sections here as needed */}
+      </main>
+
+      {/* Bottom Home Component (includes fixed bottom bar, projects, and footer) */}
+      <BottomHome language={language} onLanguageToggle={toggleLanguage} />
 
       {/* Project Section */}
       <ProjectAccordion />

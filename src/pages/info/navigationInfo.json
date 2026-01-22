@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "EN": {
+      "home": "HOME",
+      "about": "ABOUT US",
+      "contact": "CONTACT US"
+    },
+    "ES": {
+      "home": "INICIO",
+      "about": "SOBRE NOSOTROS",
+      "contact": "CONTÁCTANOS"
+    }
+  },
+  "description": {
+    "EN": {
+      "leading": "LEADING ARCHITECTURE FIRM, SPECIALIZING ON",
+      "detail": "DETAIL AND EXPERIENCE.",
+      "location": "CALI, COLOMBIA"
+    },
+    "ES": {
+      "leading": "FIRMA DE ARQUITECTURA LÍDER ESPECIALIZADA EN",
+      "detail": "DETALLE Y EXPERIENCIA.",
+      "location": "CALI, COLOMBIA"
+    }
+  }
+}
