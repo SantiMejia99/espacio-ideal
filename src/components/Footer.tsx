@@ -7,125 +7,202 @@ interface FooterProps {
 const Footer = ({ language }: FooterProps) => {
   const content = {
     EN: {
-      description: {
-        part1: "We are an",
-        architecture: "architecture",
-        part2: "firm dedicated to",
-        creating: "creating thoughtful",
-        part3:
-          ", forward-thinking spaces that seamlessly combine form and function. Our team excels in",
-        innovative: "innovative design",
-        part4:
-          ", meticulous planning, and delivering projects that meet the highest standards of",
-        quality: "quality and sustainability",
-        part5: ". We bring creative vision, and a commitment to",
-        excellence: "excellence",
-        part6: ".",
+      tagline: "Creating thoughtful, forward-thinking spaces",
+      navigation: {
+        aboutUs: "About Us",
+        approach: "Approach",
+        expertise: "Expertise",
+        projects: "Projects",
+        sustainability: "Sustainability",
+        careers: "Careers",
+        news: "News",
       },
-      links: {
-        catalogue: "Catalogue",
-        styleGuides: "Style Guides",
-        licenses: "Licenses",
+      social: {
+        instagram: "Instagram",
+        linkedin: "LinkedIn",
       },
-      designBy: "Design by",
+      contact: {
+        cali: "CALI",
+        address: "Carrera 20A. No.23-70, Cali, Colombia",
+        phone: "+57 310 425 1070",
+      },
+      footer: {
+        cookiePreferences: "Cookie Preferences",
+        privacyPolicy: "Privacy Policy",
+        websiteBy: "Website by",
+        designBy: "Sago Made",
+      },
     },
     ES: {
-      description: {
-        part1: "Somos una firma de",
-        architecture: "arquitectura",
-        part2: "dedicada a",
-        creating: "crear espacios reflexivos",
-        part3:
-          " y con visión de futuro que combinan perfectamente forma y función. Nuestro equipo sobresale en",
-        innovative: "diseño innovador",
-        part4:
-          ", planificación meticulosa y entrega de proyectos que cumplen con los más altos estándares de",
-        quality: "calidad y sostenibilidad",
-        part5: ". Aportamos visión creativa y un compromiso con la",
-        excellence: "excelencia",
-        part6: ".",
+      tagline: "Creando espacios reflexivos y con visión de futuro",
+      navigation: {
+        aboutUs: "Sobre Nosotros",
+        approach: "Enfoque",
+        expertise: "Experiencia",
+        projects: "Proyectos",
+        sustainability: "Sostenibilidad",
+        careers: "Carreras",
+        news: "Noticias",
       },
-      links: {
-        catalogue: "Catálogo",
-        styleGuides: "Guías de Estilo",
-        licenses: "Licencias",
+      social: {
+        instagram: "Instagram",
+        linkedin: "LinkedIn",
       },
-      designBy: "Diseño por",
+      contact: {
+        cali: "CALI",
+        address: "Carrera 20A. No.23-70, Cali, Colombia",
+        phone: "+57 310 425 1070",
+      },
+      footer: {
+        cookiePreferences: "Preferencias de Cookies",
+        privacyPolicy: "Política de Privacidad",
+        websiteBy: "Sitio web por",
+        designBy: "Sago Made",
+      },
     },
   };
 
-  const desc = content[language].description;
-  const links = content[language].links;
+  const t = content[language];
 
   return (
-    <footer className="relative w-full text-white overflow-hidden m-0 p-0">
-      {/* SVG defines footer height */}
-      <div className="w-full aspect-1920/420">
-        <div
-          className="
-        w-full h-full
-        bg-[url('/Branding/espacio-footer.svg')]
-        bg-no-repeat
-        bg-bottom
-        bg-contain
-        mb-0
-      "
-        />
-      </div>
-
-      {/* Content layered on top */}
-      <div className="absolute inset-0 px-4 sm:px-8 py-12 sm:py-16 flex flex-col justify-end">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16">
-          {/* Left */}
-          <div className="flex flex-col w-full lg:w-1/6">
-            <Link to="/" className="hover:opacity-60 transition-opacity">
+    <footer className="w-full bg-neutral-50 border-t border-neutral-200">
+      {/* Main Footer Content */}
+      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+          {/* Left Column - Logo & Tagline */}
+          <div className="lg:col-span-3">
+            <Link
+              to="/"
+              className="inline-block mb-6 hover:opacity-70 transition-opacity"
+            >
               <img
                 src="/Branding/espacio-logo.webp"
                 alt="Espacio Ideal Logo"
-                className="h-8 w-auto brightness-0 invert"
+                className="h-10 w-auto"
               />
             </Link>
-            <p className="text-xs mt-3">© 2025</p>
+            <p className="text-sm text-neutral-600 leading-relaxed max-w-xs">
+              {t.tagline}
+            </p>
           </div>
 
-          {/* Center */}
-          <div className="flex flex-col space-y-4 w-full lg:w-1/3">
-            <p className="text-xs leading-relaxed">
-              {desc.part1} <em>{desc.architecture}</em> {desc.part2}{" "}
-              <em>{desc.creating}</em>
-              {desc.part3} <em>{desc.innovative}</em>
-              {desc.part4} <em>{desc.quality}</em>
-              {desc.part5} <em>{desc.excellence}</em>
-              {desc.part6}
-            </p>
+          {/* Middle Column - Navigation Links */}
+          <div className="lg:col-span-3">
+            <nav className="flex flex-col space-y-3">
+              <Link
+                to="/about"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.navigation.aboutUs}
+              </Link>
+              <Link
+                to="/approach"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.navigation.approach}
+              </Link>
+              <Link
+                to="/expertise"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.navigation.expertise}
+              </Link>
+              <Link
+                to="/projects"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.navigation.projects}
+              </Link>
+              <Link
+                to="/sustainability"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.navigation.sustainability}
+              </Link>
+              <Link
+                to="/careers"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.navigation.careers}
+              </Link>
+              <Link
+                to="/news"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.navigation.news}
+              </Link>
+            </nav>
+          </div>
 
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs">
-              <Link to="/catalogue" className="underline">
-                {links.catalogue}
-              </Link>
-              <Link to="/style-guides" className="underline">
-                {links.styleGuides}
-              </Link>
-              <Link to="/licenses" className="underline">
-                {links.licenses}
-              </Link>
+          {/* Right Column - Contact Info */}
+          <div className="lg:col-span-3">
+            <div className="space-y-4">
+              <div>
+                <p className="text-xs text-neutral-400 uppercase tracking-wider mb-2">
+                  {t.contact.cali}
+                </p>
+                <p className="text-sm text-neutral-900 mb-1">
+                  {t.contact.address}
+                </p>
+                <a
+                  href={`tel:${t.contact.phone.replace(/\s/g, "")}`}
+                  className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+                >
+                  {t.contact.phone}
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Right */}
-          <div className="flex flex-col w-full lg:w-1/3 items-start lg:items-end text-xs space-y-1.5">
-            <a href="tel:+573104251070">+57 310 425 1070</a>
-            <a href="mailto:alberto.mejia@espacioideal.com">
-              alberto.mejia@espacioideal.com
-            </a>
-            <a href="mailto:espacio.ideal@gerencias.com">
-              espacio.ideal@gerencias.com
-            </a>
-            <p className="mt-3 lg:text-right">
-              Carrera 20A. No.23-70, Cali, Colombia
-            </p>
-            <p className="mt-3">
-              {content[language].designBy} <strong>Sago Made</strong>
+          {/* Far Right Column - Social & Contact Button */}
+          <div className="lg:col-span-3 flex flex-col justify-between">
+            <div className="flex flex-col space-y-3 mb-8 lg:mb-0">
+              <a
+                href="https://instagram.com/espacioideal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.social.instagram}
+              </a>
+              <a
+                href="https://linkedin.com/company/espacioideal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-neutral-900 hover:text-neutral-600 transition-colors"
+              >
+                {t.social.linkedin}
+              </a>
+            </div>
+
+            <Link
+              to="/contact"
+              className="inline-block bg-neutral-900 text-white text-sm px-8 py-3 hover:bg-neutral-700 transition-colors text-center"
+            >
+              Contact us
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-neutral-200">
+        <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs text-neutral-500">
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              <button className="hover:text-neutral-900 transition-colors">
+                {t.footer.cookiePreferences}
+              </button>
+              <Link
+                to="/privacy"
+                className="hover:text-neutral-900 transition-colors"
+              >
+                {t.footer.privacyPolicy}
+              </Link>
+            </div>
+            <p className="tracking-wider">
+              {t.footer.websiteBy}{" "}
+              <span className="font-semibold">{t.footer.designBy}</span>
             </p>
           </div>
         </div>

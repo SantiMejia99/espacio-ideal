@@ -1,28 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 interface NavigationProps {
   language: "EN" | "ES";
 }
 
 const Navigation = ({ language }: NavigationProps) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const nav = {
     EN: {
       home: "HOME",
-      products: "PRODUCTS",
       about: "ABOUT US",
+      contact: "CONTACT US",
     },
     ES: {
       home: "INICIO",
-      products: "PRODUCTOS",
       about: "SOBRE NOSOTROS",
+      contact: "CONTÁCTANOS",
     },
   };
 
@@ -39,120 +34,157 @@ const Navigation = ({ language }: NavigationProps) => {
     },
   };
 
-  const products = {
-    EN: [
-      {
-        title: "Furniture",
-        href: "/products/furniture",
-        description: "Contemporary furniture pieces for modern spaces",
-      },
-      {
-        title: "Lighting",
-        href: "/products/lighting",
-        description: "Sophisticated lighting solutions",
-      },
-      {
-        title: "Decor",
-        href: "/products/decor",
-        description: "Carefully selected decorative elements",
-      },
-    ],
-    ES: [
-      {
-        title: "Muebles",
-        href: "/products/furniture",
-        description:
-          "Piezas de mobiliario contemporáneo para espacios modernos",
-      },
-      {
-        title: "Iluminación",
-        href: "/products/lighting",
-        description: "Soluciones de iluminación sofisticadas",
-      },
-      {
-        title: "Decoración",
-        href: "/products/decor",
-        description: "Elementos decorativos cuidadosamente seleccionados",
-      },
-    ],
-  };
-
   return (
-    <nav className="fixed top-8 left-0 right-0 mx-8 z-50 px-8 py-6 bg-transparent">
-      {" "}
-      <div className="flex items-start w-full">
-        {/* Left Side - Logo and Description */}
-        <div className="flex gap-8 items-start">
-          {/* Logo */}
-          <Link to="/" className="hover:opacity-60 transition-opacity">
-            <img
-              src="/Branding/espacio-logo.webp"
-              alt="Espacio Ideal Logo"
-              className="h-4 w-auto"
-            />
-          </Link>
+    <>
+      {/* Desktop Navigation */}
+      <nav className="hidden lg:block fixed top-8 left-0 right-0 mx-8 z-50 px-8 py-6 bg-transparent">
+        <div className="flex items-start w-full">
+          {/* Left Side - Logo and Description */}
+          <div className="flex gap-8 items-start">
+            {/* Logo */}
+            <Link to="/" className="hover:opacity-60 transition-opacity">
+              <img
+                src="/Branding/espacio-logo.webp"
+                alt="Espacio Ideal Logo"
+                className="h-4 w-auto"
+              />
+            </Link>
 
-          {/* Description Text */}
-          <div className="text-sm gap-4 text-black  leading-none! ">
-            <span>
-              {description[language].leading} {description[language].detail}
-            </span>
-            <span className="flex items-center gap-2">
-              {description[language].location}
-              <span className="inline-block">🇨🇴</span>
-            </span>
+            {/* Description Text */}
+            <div className="text-sm gap-4 text-black leading-none!">
+              <span>
+                {description[language].leading} {description[language].detail}
+              </span>
+              <span className="flex items-center gap-2">
+                {description[language].location}
+                <span className="inline-block">🇨🇴</span>
+              </span>
+            </div>
+          </div>
+
+          {/* Right Side - Navigation Menu */}
+          <div className="ml-auto flex gap-8 text-sm font-normal leading-none!">
+            {/* Home */}
+            <Link
+              to="/"
+              className="text-sm font-normal hover:opacity-60 transition-opacity"
+            >
+              {nav[language].home}
+            </Link>
+
+            {/* About */}
+            <Link
+              to="/about"
+              className="text-sm font-normal hover:opacity-60 transition-opacity"
+            >
+              {nav[language].about}
+            </Link>
+
+            {/* Contact */}
+            <Link
+              to="/contact"
+              className="text-sm font-normal hover:opacity-60 transition-opacity"
+            >
+              {nav[language].contact}
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Navigation */}
+      <nav className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white border-b border-neutral-200">
+        <div className="px-4 py-4">
+          <div className="flex items-center justify-between">
+            {/* Left Side - Logo */}
+            <div className="flex flex-col gap-1">
+              <Link to="/" className="hover:opacity-60 transition-opacity">
+                <img
+                  src="/Branding/espacio-logo.webp"
+                  alt="Espacio Ideal Logo"
+                  className="h-5 w-auto"
+                />
+              </Link>
+            </div>
+
+            {/* Right Side - Hamburger Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 hover:bg-neutral-100 transition-colors rounded"
+              aria-label="Toggle menu"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={`transition-transform duration-300 ${
+                  mobileMenuOpen ? "rotate-90" : ""
+                }`}
+              >
+                {mobileMenuOpen ? (
+                  <>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </>
+                ) : (
+                  <>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </>
+                )}
+              </svg>
+            </button>
           </div>
         </div>
 
-        {/* Right Side - Navigation Menu */}
-        <div className="ml-auto flex gap-8 text-sm font-normal bg-transparent hover:bg-transparent hover:opacity-60 data-[state=open]:bg-transparent leading-none! ">
-          {/* Home */}
-          <Link
-            to="/"
-            className="text-sm font-normal bg-transparent hover:bg-transparent hover:opacity-60 data-[state=open]:bg-transparent p-0! h-auto! leading-none! items-baseline! justify-start!"
-          >
-            {nav[language].home}
-          </Link>
+        {/* Mobile Menu Dropdown */}
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="px-4 py-4 bg-white border-t border-neutral-200">
+            {/* Home */}
+            <Link
+              to="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-3 text-sm font-normal hover:opacity-60 transition-opacity"
+            >
+              {nav[language].home}
+            </Link>
 
-          {/* Products Dropdown */}
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-normal bg-transparent hover:bg-transparent hover:opacity-60 data-[state=open]:bg-transparent p-0! h-auto! leading-none! items-baseline! justify-start!">
-                  {nav[language].products}
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-600 gap-3 p-4">
-                    {products[language].map((product) => (
-                      <li key={product.href}>
-                        <Link to={product.href}>
-                          <NavigationMenuLink className="text-sm font-normal hover:opacity-60 transition-opacity bg-transparent">
-                            <div className="text-sm font-normal leading-none">
-                              {product.title}
-                            </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {product.description}
-                            </p>
-                          </NavigationMenuLink>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+            {/* About */}
+            <Link
+              to="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-3 text-sm font-normal hover:opacity-60 transition-opacity"
+            >
+              {nav[language].about}
+            </Link>
 
-          {/* About */}
-          <Link
-            to="/about"
-            className="text-sm font-normal hover:opacity-60 transition-opacity leading-none"
-          >
-            {nav[language].about}
-          </Link>
+            {/* Contact */}
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-3 text-sm font-normal hover:opacity-60 transition-opacity"
+            >
+              {nav[language].contact}
+            </Link>
+
+            {/* Location */}
+            <div className="pt-4 mt-4 border-t border-neutral-200 text-xs text-neutral-500 flex items-center gap-2">
+              {description[language].location}
+              <span className="inline-block">🇨🇴</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
