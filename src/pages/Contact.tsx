@@ -11,8 +11,7 @@ import {
 } from "@/components/ui/card";
 import { useLanguage } from "@/components/LanguageContext";
 
-const Products = () => {
-  // Use the global language context
+const Contact = () => {
   const { language, toggleLanguage } = useLanguage();
 
   const content = {
@@ -113,4 +112,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Contact;

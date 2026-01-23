@@ -1,16 +1,12 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import LanguageToggle from "@/components/layout/LanguageToggle";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { useLanguage } from "@/components/LanguageContext";
 
 const About = () => {
-  const [language, setLanguage] = useState<"EN" | "ES">("EN");
-
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "EN" ? "ES" : "EN"));
-  };
+  const { language, toggleLanguage } = useLanguage();
 
   const content = {
     EN: {
@@ -82,7 +78,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation language={language} />
+      <Navigation />
 
       <main className="pt-32 px-8 pb-20 max-w-4xl mx-auto">
         {/* Header */}
