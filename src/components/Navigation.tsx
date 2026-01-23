@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import navigationInfo from "@/pages/info/navigationInfo.json";
+import { useLanguage } from "@/components/LanguageContext";
 
-interface NavigationProps {
-  language: "EN" | "ES";
-}
-
-const Navigation = ({ language }: NavigationProps) => {
+const Navigation = () => {
+  const { language } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Use the imported JSON data

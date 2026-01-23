@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import LanguageToggle from "@/components/layout/LanguageToggle";
@@ -10,13 +9,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useLanguage } from "@/components/LanguageContext";
 
 const Products = () => {
-  const [language, setLanguage] = useState<"EN" | "ES">("EN");
-
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "EN" ? "ES" : "EN"));
-  };
+  // Use the global language context
+  const { language, toggleLanguage } = useLanguage();
 
   const content = {
     EN: {
@@ -70,9 +67,10 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation language={language} />
+      {/* Navigation uses global language */}
+      <Navigation />
 
-      <main className="pt-32 px-8 pb-20 max-w-7xl mx-auto">
+      <main className="pt-32 px-4 sm:px-8 pb-20 max-w-7xl mx-0 sm:mx-8">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4">
             {content[language].title}

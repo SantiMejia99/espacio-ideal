@@ -29,8 +29,6 @@ const isLightObject = (object: THREE.Object3D): object is THREE.Light => {
 
 export interface ViewerProps {
   url: string;
-  width?: number | string;
-  height?: number | string;
   modelXOffset?: number;
   modelYOffset?: number;
   defaultRotationX?: number;
@@ -46,6 +44,7 @@ export interface ViewerProps {
   keyLightIntensity?: number;
   fillLightIntensity?: number;
   rimLightIntensity?: number;
+  modelScale?: number; // Scale prop
   environmentPreset?:
     | "city"
     | "sunset"
@@ -135,6 +134,7 @@ interface ModelInnerProps {
   autoRotate: boolean;
   autoRotateSpeed: number;
   onLoaded?: () => void;
+  modelScale?: number;
 }
 
 const ModelInner: FC<ModelInnerProps> = ({
@@ -155,6 +155,7 @@ const ModelInner: FC<ModelInnerProps> = ({
   autoRotate,
   autoRotateSpeed,
   onLoaded,
+  modelScale,
 }) => {
   const outer = useRef<THREE.Group>(null!);
   const inner = useRef<THREE.Group>(null!);
@@ -187,6 +188,16 @@ const ModelInner: FC<ModelInnerProps> = ({
     const s = 1 / (sphere.radius * 2);
     g.position.set(-sphere.center.x, -sphere.center.y, -sphere.center.z);
     g.scale.setScalar(s);
+
+    const scaleFactor = modelScale ?? 1.5; // <-- directly from destructured props
+    g.scale.setScalar(s * scaleFactor); // <-- use existing 's', no redeclaration
+
+    const offset = new THREE.Vector3(0, -0.06, 0); // tweak X/Y/Z to visually center
+    g.position.set(
+      -sphere.center.x + offset.x,
+      -sphere.center.y + offset.y,
+      -sphere.center.z + offset.z,
+    );
 
     g.traverse((o: THREE.Object3D) => {
       if (isMeshObject(o)) {
@@ -247,6 +258,50 @@ const ModelInner: FC<ModelInnerProps> = ({
       return () => clearInterval(id);
     } else onLoaded?.();
   }, [content]);
+
+  // ---------- NEW useEffect for autoFrame resize ----------
+  useEffect(() => {
+    if (!autoFrame || !content) return;
+
+    // Type guard for PerspectiveCamera
+    const isPerspectiveCamera = (
+      cam: THREE.Camera,
+    ): cam is THREE.PerspectiveCamera =>
+      (cam as THREE.PerspectiveCamera).isPerspectiveCamera === true;
+
+    const resizeHandler = () => {
+      const g = inner.current;
+      const sphere = new THREE.Box3()
+        .setFromObject(g)
+        .getBoundingSphere(new THREE.Sphere());
+      const s = 1 / (sphere.radius * 2);
+      g.position.set(-sphere.center.x, -sphere.center.y, -sphere.center.z);
+      g.scale.setScalar(s);
+
+      g.getWorldPosition(pivotW.current);
+      pivot.copy(pivotW.current);
+
+      if (isPerspectiveCamera(camera)) {
+        const persp = camera; // TS now knows this is PerspectiveCamera
+        const fitR = sphere.radius * s;
+        const d = (fitR * 1.2) / Math.sin((persp.fov * Math.PI) / 180 / 2);
+        persp.position.set(
+          pivotW.current.x,
+          pivotW.current.y,
+          pivotW.current.z + d,
+        );
+        persp.near = d / 10;
+        persp.far = d * 10;
+        persp.updateProjectionMatrix();
+      }
+      invalidate();
+    };
+
+    window.addEventListener("resize", resizeHandler);
+    resizeHandler(); // call once immediately
+
+    return () => window.removeEventListener("resize", resizeHandler);
+  }, [autoFrame, content, camera, pivot]);
 
   useEffect(() => {
     if (!enableManualRotation || isTouch) return;
@@ -442,8 +497,6 @@ const ModelInner: FC<ModelInnerProps> = ({
 
 const ModelViewer: FC<ViewerProps> = ({
   url,
-  width = 400,
-  height = 400,
   modelXOffset = 0,
   modelYOffset = 0,
   defaultRotationX = -50,
@@ -462,7 +515,7 @@ const ModelViewer: FC<ViewerProps> = ({
   environmentPreset = "forest",
   autoFrame = false,
   placeholderSrc,
-  showScreenshotButton = true,
+  showScreenshotButton = false,
   fadeIn = false,
   autoRotate = false,
   autoRotateSpeed = 0.35,
@@ -511,8 +564,8 @@ const ModelViewer: FC<ViewerProps> = ({
   return (
     <div
       style={{
-        width,
-        height,
+        width: "100%",
+        height: "100%",
         position: "relative",
         touchAction: "pan-y pinch-zoom",
       }}
@@ -567,10 +620,10 @@ const ModelViewer: FC<ViewerProps> = ({
 
         <ContactShadows
           ref={contactRef as any}
-          position={[0, -0.5, 0]}
+          position={[0, -0.2, 0]}
           opacity={0.35}
-          scale={10}
-          blur={2}
+          scale={11}
+          blur={3}
         />
 
         <Suspense fallback={<Loader placeholderSrc={placeholderSrc} />}>

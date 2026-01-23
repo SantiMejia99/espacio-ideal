@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import footerInfo from "@/pages/info/footerInfo.json";
+import { useLanguage } from "@/components/LanguageContext";
 
-interface FooterProps {
-  language: "EN" | "ES";
-}
-
-const Footer = ({ language }: FooterProps) => {
+const Footer = () => {
+  const { language } = useLanguage(); // Pull language from context
   const t = footerInfo[language];
 
   return (
