@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import navigationInfo from "@/pages/info/navigationInfo.json";
 import { useLanguage } from "@/components/LanguageContext";
 
@@ -41,29 +41,32 @@ const Navigation = () => {
 
           {/* Right Side - Navigation Menu */}
           <div className="ml-auto flex gap-8 text-sm font-normal leading-none!">
-            {/* Home */}
-            <Link
+            <NavLink
               to="/"
-              className="text-sm font-normal hover:opacity-60 transition-opacity"
+              className={({ isActive }) =>
+                `relative text-sm font-normal transition-opacity hover:opacity-60 after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full after:bg-black after:origin-left after:scale-x-0 after:transition-transform after:duration-300  ${isActive ? "after:scale-x-100" : "hover:after:scale-x-100"}`
+              }
             >
               {nav[language].home}
-            </Link>
+            </NavLink>
 
-            {/* About */}
-            <Link
+            <NavLink
               to="/about"
-              className="text-sm font-normal hover:opacity-60 transition-opacity"
+              className={({ isActive }) =>
+                `relative text-sm font-normal transition-opacity hover:opacity-60 after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full after:bg-black after:origin-left after:scale-x-0 after:transition-transform after:duration-300  ${isActive ? "after:scale-x-100" : "hover:after:scale-x-100"}`
+              }
             >
               {nav[language].about}
-            </Link>
+            </NavLink>
 
-            {/* Contact */}
-            <Link
+            <NavLink
               to="/contact"
-              className="text-sm font-normal hover:opacity-60 transition-opacity"
+              className={({ isActive }) =>
+                `relative text-sm font-normal transition-opacity hover:opacity-60 after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full after:bg-black after:origin-left after:scale-x-0 after:transition-transform after:duration-300  ${isActive ? "after:scale-x-100" : "hover:after:scale-x-100"}`
+              }
             >
               {nav[language].contact}
-            </Link>
+            </NavLink>
           </div>
         </div>
       </nav>
@@ -127,31 +130,44 @@ const Navigation = () => {
         >
           <div className="px-4 py-4 bg-white border-t border-neutral-200">
             {/* Home */}
-            <Link
+            <NavLink
               to="/"
+              end // <- required so only exact "/" is active
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-3 text-sm font-normal hover:opacity-60 transition-opacity"
+              className={({ isActive }) =>
+                `block py-3 text-sm font-normal transition-opacity ${
+                  isActive ? "underline underline-offset-4" : ""
+                }`
+              }
             >
               {nav[language].home}
-            </Link>
+            </NavLink>
 
             {/* About */}
-            <Link
+            <NavLink
               to="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-3 text-sm font-normal hover:opacity-60 transition-opacity"
+              className={({ isActive }) =>
+                `block py-3 text-sm font-normal transition-opacity ${
+                  isActive ? "underline underline-offset-4" : ""
+                }`
+              }
             >
               {nav[language].about}
-            </Link>
+            </NavLink>
 
             {/* Contact */}
-            <Link
+            <NavLink
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-3 text-sm font-normal hover:opacity-60 transition-opacity"
+              className={({ isActive }) =>
+                `block py-3 text-sm font-normal transition-opacity ${
+                  isActive ? "underline underline-offset-4" : ""
+                }`
+              }
             >
               {nav[language].contact}
-            </Link>
+            </NavLink>
 
             {/* Location */}
             <div className="pt-4 mt-4 border-t border-neutral-200 text-xs text-neutral-500 flex items-center gap-2">

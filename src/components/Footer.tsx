@@ -3,7 +3,7 @@ import footerInfo from "@/pages/info/footerInfo.json";
 import { useLanguage } from "@/components/LanguageContext";
 
 const Footer = () => {
-  const { language } = useLanguage(); // Pull language from context
+  const { language } = useLanguage();
   const t = footerInfo[language];
 
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Left Half */}
           <div className="flex-1 flex flex-col md:flex-row gap-12 lg:gap-16">
             {/* Logo & Tagline */}
-            <div className="flex-1">
+            <div className="flex-1 shrink-0">
               <Link
                 to="/"
                 className="inline-block mb-6 hover:opacity-70 transition-opacity"
@@ -22,7 +22,7 @@ const Footer = () => {
                 <img
                   src="/Branding/espacio-logo.webp"
                   alt="Espacio Ideal Logo"
-                  className="h-10 w-auto"
+                  className="h-10 sm:h-12 lg:h-14 w-auto"
                 />
               </Link>
               <p className="text-sm text-neutral-600 leading-relaxed max-w-xs">
