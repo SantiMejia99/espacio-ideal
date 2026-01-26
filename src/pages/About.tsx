@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import LanguageToggle from "@/components/layout/LanguageToggle";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { useLanguage } from "@/components/LanguageContext";
 
 const About = () => {
@@ -10,69 +7,106 @@ const About = () => {
 
   const content = {
     EN: {
-      title: "About Us",
-      subtitle: "Architecture & Design Excellence",
-      intro:
-        "Espacio Ideal is a leading architecture firm based in Cali, Colombia, specializing in detail-oriented design and exceptional client experiences.",
-      mission: {
-        title: "Our Mission",
-        text: "We believe in creating spaces that not only meet functional requirements but also inspire and elevate the human experience. Every project is an opportunity to blend form, function, and beauty.",
-      },
-      values: {
-        title: "Our Values",
-        items: [
-          { label: "Excellence", text: "We pursue perfection in every detail" },
-          {
-            label: "Innovation",
-            text: "We embrace new ideas and technologies",
-          },
-          {
-            label: "Sustainability",
-            text: "We design with the environment in mind",
-          },
-          { label: "Collaboration", text: "We work closely with our clients" },
-        ],
+      founder: {
+        name: "Alberto Mejia.",
+        title: "(Founder & Architect)",
+        bio1: "Alberto blends business sense with creative instinct, using both to build brands that actually connect. With a background in marketing, design, and leadership, he's known for spotting clarity in the chaos — then charting the course forward.",
+        bio2: "He's most in his element collaborating with smart, curious people and shaping work that feels as good as it looks. When he's not deep in the details, you'll probably find him on a basketball court — with a tight handle and a smooth jumper.",
       },
       contact: {
-        title: "Get in Touch",
-        location: "Cali, Colombia",
-        cta: "Contact Us",
+        title: "Contact",
+        email: "alberto.mejia@espacioideal.com",
+        phone: "+ 51 519 258 2365",
       },
-      backHome: "Back to Home",
+      services: {
+        title: "Services",
+        list: [
+          "Architecture",
+          "Interior Design",
+          "Industrial Design",
+          "Custom Pieces",
+          "Space",
+          "Creative & Art Direction",
+          "Concept & Strategy",
+          "Consultancy & Research",
+        ],
+      },
+      awards: {
+        title: "Awards",
+        list: [
+          "Rising Talent Award (Paris, FR)",
+          "Archiproducts Design (Milan, ITA)",
+          "Wirtschaftspreis (Sindelfingen, GER)",
+          "Deutscher Designer (Frankfurt, GER)",
+          "German Design (Frankfurt, GER)",
+          "Ein&Zwanzig Award (Frankfurt, GER)",
+          "AED Neuland (Stuttgart, GER)",
+          "Mia Seeger (Stuttgart, GER)",
+          "Interprint (Łódź, POL)",
+          "Paradyz (Łódź, POL)",
+        ],
+      },
+      office: {
+        title: "Office",
+        address: "Carrera 20A. No. 23-70, Cali Colombia",
+      },
+      tagline: {
+        main: "We design with weight.",
+        sub1: "Architecture",
+        sub2: "Interior",
+        sub3: "without compromise.",
+      },
     },
     ES: {
-      title: "Sobre Nosotros",
-      subtitle: "Excelencia en Arquitectura y Diseño",
-      intro:
-        "Espacio Ideal es una firma de arquitectura líder con sede en Cali, Colombia, especializada en diseño orientado al detalle y experiencias excepcionales para el cliente.",
-      mission: {
-        title: "Nuestra Misión",
-        text: "Creemos en crear espacios que no solo cumplan con los requisitos funcionales, sino que también inspiren y eleven la experiencia humana. Cada proyecto es una oportunidad para combinar forma, función y belleza.",
-      },
-      values: {
-        title: "Nuestros Valores",
-        items: [
-          {
-            label: "Excelencia",
-            text: "Buscamos la perfección en cada detalle",
-          },
-          { label: "Innovación", text: "Abrazamos nuevas ideas y tecnologías" },
-          {
-            label: "Sostenibilidad",
-            text: "Diseñamos pensando en el medio ambiente",
-          },
-          {
-            label: "Colaboración",
-            text: "Trabajamos estrechamente con nuestros clientes",
-          },
-        ],
+      founder: {
+        name: "Alberto Mejia.",
+        title: "(Fundador y Arquitecto)",
+        bio1: "Alberto combina sentido de negocios con instinto creativo, usando ambos para construir marcas que realmente conectan. Con experiencia en marketing, diseño y liderazgo, es conocido por encontrar claridad en el caos — y luego trazar el camino a seguir.",
+        bio2: "Está en su elemento colaborando con personas inteligentes y curiosas, dando forma a trabajos que se sienten tan bien como se ven. Cuando no está en los detalles, probablemente lo encuentres en una cancha de baloncesto — con un buen manejo y un tiro suave.",
       },
       contact: {
-        title: "Contáctanos",
-        location: "Cali, Colombia",
-        cta: "Contáctanos",
+        title: "Contacto",
+        email: "alberto.mejia@espacioideal.com",
+        phone: "+ 51 519 258 2365",
       },
-      backHome: "Volver al Inicio",
+      services: {
+        title: "Servicios",
+        list: [
+          "Arquitectura",
+          "Diseño de Interiores",
+          "Diseño Industrial",
+          "Piezas Personalizadas",
+          "Espacio",
+          "Dirección Creativa y de Arte",
+          "Concepto y Estrategia",
+          "Consultoría e Investigación",
+        ],
+      },
+      awards: {
+        title: "Premios",
+        list: [
+          "Rising Talent Award (París, FR)",
+          "Archiproducts Design (Milán, ITA)",
+          "Wirtschaftspreis (Sindelfingen, GER)",
+          "Deutscher Designer (Frankfurt, GER)",
+          "German Design (Frankfurt, GER)",
+          "Ein&Zwanzig Award (Frankfurt, GER)",
+          "AED Neuland (Stuttgart, GER)",
+          "Mia Seeger (Stuttgart, GER)",
+          "Interprint (Łódź, POL)",
+          "Paradyz (Łódź, POL)",
+        ],
+      },
+      office: {
+        title: "Oficina",
+        address: "Carrera 20A. No. 23-70, Cali Colombia",
+      },
+      tagline: {
+        main: "Diseñamos con peso.",
+        sub1: "Arquitectura",
+        sub2: "Interior",
+        sub3: "sin compromisos.",
+      },
     },
   };
 
@@ -80,70 +114,193 @@ const About = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <main className="pt-32 px-8 pb-20 max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4">
-            {content[language].title}
-          </h1>
-          <p className="text-xl text-gray-600">{content[language].subtitle}</p>
-        </div>
+      <main className="pt-24 sm:pt-24 md:pt-30 lg:pt-36 pb-20">
+        {/* Three Column Layout for Desktop, Single Column for Mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 px-4 sm:px-8 mx-0 sm:mx-8">
+          {/* First Column - Introductory Text */}
+          <div className="space-y-4 text-[15px] leading-relaxed">
+            <p>
+              The upholstered wall hook creates a reduced, horizontal storage
+              platform and offers the possibility to attach objects to a wall
+              using a quick, charming gesture.
+            </p>
+            <p>
+              Starting point for the project is the idea of up-cycling and
+              reusing materials in a cross-disciplinary manner. Geometric cut
+              out shapes that arise in the production process and would usually
+              not find valuable application in the industry are used as base to
+              create the minimalist object. Haus Otto's ready-made core form is
+              combined with the strong colour palette and signature textiles by{" "}
+              <span className="underline">Simone Wild</span>. Valuing
+              sustainable and fair production methods, the velvet cover is
+              manufactured in Germany by a social business, working with refugee
+              women.
+            </p>
+            <p>
+              The upholstered wall hook creates a reduced, horizontal storage
+              platform and offers the possibility to attach objects to a wall
+              using a quick, charming gesture. Starting point for the project is
+              the idea of up-cycling and reusing materials in a
+              cross-disciplinary manner. Geometric cut out shapes that arise in
+              the production process and would usually not find valuable
+              application in the industry. The upholstered wall hook creates a
+              reduced, horizontal storage platform and offers the possibility to
+              attach objects to a wall using a quick, charming gesture.
+            </p>
+          </div>
 
-        {/* Introduction */}
-        <div className="mb-16">
-          <p className="text-lg leading-relaxed text-gray-700">
-            {content[language].intro}
-          </p>
-        </div>
-
-        <Separator className="my-12" />
-
-        {/* Mission */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-6">
-            {content[language].mission.title}
-          </h2>
-          <p className="text-lg leading-relaxed text-gray-700">
-            {content[language].mission.text}
-          </p>
-        </div>
-
-        <Separator className="my-12" />
-
-        {/* Values */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8">
-            {content[language].values.title}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {content[language].values.items.map((item, index) => (
-              <div key={index}>
-                <h3 className="text-xl font-semibold mb-2">{item.label}</h3>
-                <p className="text-gray-600">{item.text}</p>
+          {/* Second Column - About & Contact */}
+          <div className="space-y-12">
+            {/* About Section */}
+            <div>
+              <div className="border-t border-black pt-4 mb-6">
+                <h2 className="text-sm font-medium mb-8">About</h2>
               </div>
-            ))}
+              <div className="space-y-4">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="text-2xl font-normal">
+                    {content[language].founder.name}
+                  </h3>
+                  <span className="text-sm">
+                    {content[language].founder.title}
+                  </span>
+                </div>
+                <div className="border-t border-black"></div>
+              </div>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed">
+                <p>{content[language].founder.bio1}</p>
+                <p>{content[language].founder.bio2}</p>
+              </div>
+            </div>
+
+            {/* Contact Section */}
+            <div>
+              <div className="border-t border-black pt-4 mb-6">
+                <h2 className="text-sm font-medium">
+                  {content[language].contact.title}
+                </h2>
+              </div>
+              <div className="space-y-2 text-[15px]">
+                <p>{content[language].contact.email}</p>
+                <p>{content[language].contact.phone}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Third Column - Services, Awards, Office */}
+          <div className="space-y-12">
+            {/* Services Section */}
+            <div>
+              <div className="border-t border-black pt-4 mb-6">
+                <h2 className="text-sm font-medium">
+                  {content[language].services.title}
+                </h2>
+              </div>
+              <div className="space-y-1 text-[15px]">
+                {content[language].services.list.map((service, index) => (
+                  <p key={index}>{service}</p>
+                ))}
+              </div>
+            </div>
+
+            {/* Awards Section */}
+            <div>
+              <div className="border-t border-black pt-4 mb-6">
+                <h2 className="text-sm font-medium">
+                  {content[language].awards.title}
+                </h2>
+              </div>
+              <div className="space-y-1 text-[15px]">
+                {content[language].awards.list.map((award, index) => (
+                  <p key={index}>{award}</p>
+                ))}
+              </div>
+            </div>
+
+            {/* Office Section */}
+            <div>
+              <div className="border-t border-black pt-4 mb-6">
+                <h2 className="text-sm font-medium">
+                  {content[language].office.title}
+                </h2>
+              </div>
+              <p className="text-[15px]">{content[language].office.address}</p>
+            </div>
           </div>
         </div>
+        {/* Venn Diagram - Full Width Below Columns */}
+        <div className="mt-20 px-4 sm:px-8 mx-0 sm:mx-8">
+          <svg
+            viewBox="0 0 800 400"
+            className="w-full max-w-3xl mx-auto"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Left Circle - Design */}
+            <circle
+              cx="280"
+              cy="200"
+              r="180"
+              fill="none"
+              stroke="black"
+              strokeWidth="2"
+            />
+            {/* Right Circle - Function */}
+            <circle
+              cx="520"
+              cy="200"
+              r="180"
+              fill="none"
+              stroke="black"
+              strokeWidth="2"
+            />
+            {/* Intersection - filled black */}
+            <path
+              d="M 400 20 A 180 180 0 0 1 400 380 A 180 180 0 0 1 400 20 Z"
+              fill="black"
+            />
 
-        <Separator className="my-12" />
-
-        {/* Contact */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">
-            {content[language].contact.title}
-          </h2>
-          <p className="text-lg text-gray-600 mb-6 flex items-center justify-center gap-2">
-            {content[language].contact.location}
-            <span className="inline-block w-5 h-3">🇨🇴</span>
-          </p>
-          <Button size="lg">{content[language].contact.cta}</Button>
+            {/* Labels */}
+            <text
+              x="220"
+              y="210"
+              fontSize="18"
+              fontFamily="system-ui, -apple-system, sans-serif"
+              textAnchor="middle"
+            >
+              Design.
+            </text>
+            <text
+              x="400"
+              y="210"
+              fontSize="18"
+              fontFamily="system-ui, -apple-system, sans-serif"
+              textAnchor="middle"
+              fill="white"
+            >
+              Us.
+            </text>
+            <text
+              x="580"
+              y="210"
+              fontSize="18"
+              fontFamily="system-ui, -apple-system, sans-serif"
+              textAnchor="middle"
+            >
+              Function.
+            </text>
+          </svg>
         </div>
-
-        {/* Back to Home */}
-        <div className="text-center">
-          <Button asChild variant="link">
-            <Link to="/">&larr; {content[language].backHome}</Link>
-          </Button>
+        {/* Tagline - Full Width Below Diagram */}
+        <div className="mt-20 px-4 sm:px-8 mx-0 sm:mx-8">
+          <h2 className="text-4xl lg:text-6xl font-normal leading-tight text-right max-w-5xl ml-auto">
+            {content[language].tagline.main}
+            <br />
+            <span className="italic">
+              {content[language].tagline.sub1}
+            </span> and{" "}
+            <span className="italic">{content[language].tagline.sub2}</span>{" "}
+            {content[language].tagline.sub3}
+          </h2>
         </div>
       </main>
 
