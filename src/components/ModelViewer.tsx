@@ -212,6 +212,8 @@ const ModelViewer: FC<ViewerProps> = ({
     <div className="relative w-full h-full" style={{ width, height }}>
       <Canvas
         className="w-full h-full touch-none"
+        resize={{ scroll: false }}
+        dpr={[1, 1.5]}
         shadows
         frameloop="demand"
         camera={{ fov: 45, position: cameraPosition || [0, 0, defaultZoom] }}
