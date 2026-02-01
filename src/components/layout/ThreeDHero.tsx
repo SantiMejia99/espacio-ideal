@@ -19,7 +19,7 @@ const ThreeDHero = () => {
         <ModelViewer
           url={MODEL_URL}
           environmentPreset="forest"
-          enableManualRotation={true}
+          enableManualRotation={false}
           enableManualZoom={false}
           autoRotate={true}
           autoRotateSpeed={0.5}
