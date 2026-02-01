@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { motion, AnimatePresence } from "framer-motion";
 import projectsData from "@/pages/info/accordionProjects.json";
 import { useLanguage } from "@/components/LanguageContext";
@@ -137,7 +137,7 @@ const ProjectAccordion = () => {
             transition={{ duration: 0.2 }}
             className="hidden lg:flex fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-50"
           >
-            <div className="w-auto h-180 overflow-hidden relative">
+            <div className="w-180 h-auto overflow-hidden relative">
               <img
                 src={activeProject.displayimage}
                 alt={activeProject.client}
@@ -182,7 +182,7 @@ const ProjectAccordion = () => {
           <AccordionItem
             value={project.id}
             key={project.id}
-            className={`border-y border-black/20 group py-2 transition-opacity duration-500 ease-in-out ${
+            className={`border-y border-black/20 group/item py-2 transition-opacity duration-500 ease-in-out ${
               hoveredId === null ||
               hoveredId === project.id ||
               expandedValue === project.id
@@ -194,7 +194,7 @@ const ProjectAccordion = () => {
           >
             <AccordionTrigger className="hover:no-underline py-4 text-sm [&>svg]:hidden">
               <div className="flex flex-col md:flex-row w-full items-center">
-                <div className="flex-1 font-bold text-left text-base md:text-base transition-transform duration-300 group-hover:translate-x-0.5">
+                <div className="flex-1 font-bold text-left text-base md:text-base transition-transform duration-300 group-hover/item:translate-x-0.5">
                   {project.client}
                 </div>
                 <div className="flex-1 text-left text-neutral-600">
@@ -211,7 +211,7 @@ const ProjectAccordion = () => {
 
             <AccordionContent className="bg-white py-10 px-1">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 text-sm leading-relaxed">
-                {/* Column 1: Description A & Team */}
+                {/* Column 1: Description A & Button */}
                 <div className="flex flex-col space-y-8 text-left">
                   <div>
                     <span className="block text-sm font-regular text-neutral-400 mb-4">
@@ -221,14 +221,12 @@ const ProjectAccordion = () => {
                       {project.description_col1}
                     </p>
                   </div>
-                  <div className="pt-6">
-                    <Button className="w-full h-14 bg-neutral-900 text-white rounded-none hover:bg-neutral-800 transition-colors uppercase text-xs tracking-widest font-bold borde-1 border-neutral-900">
-                      {text.cta}
-                    </Button>
+                  <div>
+                    <InteractiveHoverButton>{text.cta}</InteractiveHoverButton>
                   </div>
                 </div>
 
-                {/* Column 2: Description B & Button */}
+                {/* Column 2: Description B & Team */}
                 <div className="flex flex-col space-y-8 text-left">
                   <div>
                     <span className="block text-sm font-regular text-neutral-400 mb-4">
