@@ -24,7 +24,7 @@ const ThreeDHero = () => {
           autoRotate={true}
           autoRotateSpeed={0.5}
           scale={1.2}
-          position={[0, -0.6, 0]}
+          position={[0, -0.4, 0]}
           cameraPosition={[0, 0, 6]}
         />
       </div>

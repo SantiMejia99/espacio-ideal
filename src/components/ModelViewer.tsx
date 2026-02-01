@@ -157,7 +157,12 @@ const ModelInner: FC<ModelInnerProps> = ({
 
   useFrame((_, dt) => {
     if (!outer.current) return;
-    if (autoRotate) outer.current.rotation.y += autoRotateSpeed * dt;
+
+    // FIX 1: Trigger re-render (invalidate) when auto-rotating
+    if (autoRotate) {
+      outer.current.rotation.y += autoRotateSpeed * dt;
+      invalidate();
+    }
 
     outer.current.rotation.y += vel.current.x;
     outer.current.rotation.x += vel.current.y;
@@ -199,7 +204,7 @@ const ModelViewer: FC<ViewerProps> = ({
   placeholderSrc,
   autoRotate = false,
   autoRotateSpeed = 0.5,
-  scale = 2.5, // Standard size
+  scale = 2.5,
   position = [0, 0, 0],
   cameraPosition,
 }) => {
@@ -229,8 +234,9 @@ const ModelViewer: FC<ViewerProps> = ({
             position={position}
           />
 
+          {/* FIX 2: Move ContactShadows down by the same Y amount as the object */}
           <ContactShadows
-            position={[0, -0.01, 0]}
+            position={[0, position[1], 0]}
             opacity={0.4}
             scale={10}
             blur={2.5}

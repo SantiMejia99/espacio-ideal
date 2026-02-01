@@ -1,74 +1,624 @@
-[
-  {
-    "client": "Expresso Bolivariano",
-    "collaborator": "Terminal de Transporte de Cali",
-    "case": "Oficina Administrativas",
-    "year": 2023
-  },
-  {
-    "client": "Business Center",
-    "collaborator": "Business Center de Cali",
-    "case": "Oficina Gerenciales",
-    "year": 2022
-  },
-  {
-    "client": "Bego Ingeniería",
-    "collaborator": "Oficinas Gerencias Isan",
-    "case": "Oficina Administrativas",
-    "year": 2023
-  },
-  {
-    "client": "Coomotor",
-    "collaborator": "Terminal de Transporte de Cali",
-    "case": "Lobby VIP",
-    "year": 2024
-  },
-  {
-    "client": "Marval",
-    "collaborator": "Oficinas de Transporte",
-    "case": "Oficina Administrativas",
-    "year": 2021
-  },
-  {
-    "client": "Camara de Comercio",
-    "collaborator": "Ciudad de Santander de Quilichao",
-    "case": "Oficina Gubernamentale",
-    "year": 2023
-  },
-  {
-    "client": "Entrada Sede Principal",
-    "collaborator": "Banco de Occidente",
-    "case": "Vestíbulo Financiero",
-    "year": 2024
-  },
-  {
-    "client": "Ingenio Mayaguez",
-    "collaborator": "Centro Comercial Mayaguez",
-    "case": "Espacio Comercial",
-    "year": 2023
-  },
-  {
-    "client": "Consultorio San Fernando",
-    "collaborator": "Edificio San Fernando",
-    "case": "Consultorio Odontologico",
-    "year": 2023
-  },
-  {
-    "client": "Centro de Conferencias Universidad Autonoma",
-    "collaborator": "Universidad Autonoma de Occidente",
-    "case": "Mesa de Negocios",
-    "year": 2025
-  },
-  {
-    "client": "Apartamentos Umbría Garden",
-    "collaborator": "Umbría Garden",
-    "case": "Diseño de Apartamento",
-    "year": 2023
-  },
-  {
-    "client": "Reserva del Río",
-    "collaborator": "Río Pance",
-    "case": "Diseño de Espacio Interior",
-    "year": 2022
-  }
-]
+{
+  "EN": [
+    {
+      "id": "expresso-bolivariano",
+      "title": "Expresso Bolivariano",
+      "client": "Terminal de Transporte de Cali",
+      "year": "2023",
+      "category": "Administrative Office",
+      "displayimage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "The Expresso Bolivariano project focused on redefining the administrative hub within the Terminal de Transporte de Cali. Our objective was to create a high-traffic workspace that maintains a sense of calm and efficiency through modular furniture and sound-dampening materials.",
+      "description_col2": "We implemented a color palette inspired by the brand's heritage while integrating modern ergonomic standards. The layout maximizes natural light penetration into deep floor plates, ensuring that staff wellness is prioritized in a busy transportation environment.",
+      "team_members": [
+        {
+          "name": "Alberto Mejia",
+          "title": "Lead Architect",
+          "image": "https://api.dicebear.com/9.x/lorelei/svg?seed=Felix"
+        },
+        {
+          "name": "Maura Rodriguez",
+          "title": "Project Manager",
+          "image": "https://api.dicebear.com/9.x/lorelei/svg?seed=Aneka"
+        },
+        {
+          "name": "Felipe Mora",
+          "title": "Interior Designer",
+          "image": "https://api.dicebear.com/9.x/lorelei/svg?seed=Avery"
+        },
+        {
+          "name": "Santiago Arias",
+          "title": "Junior Architect",
+          "image": "https://api.dicebear.com/9.x/lorelei/svg?seed=Jude"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "business-center",
+      "title": "Business Center",
+      "client": "Business Center de Cali",
+      "year": "2022",
+      "category": "Executive Office",
+      "displayimage": "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "For the Business Center de Cali, the design brief emphasized prestige and executive functionality. We developed a suite of private offices and boardrooms that utilize premium wood veneers and custom-tailored lighting to evoke a sense of professional authority.",
+      "description_col2": "The integration of hidden technology within the furniture allows for seamless digital presentations without cluttering the aesthetic. The result is a sophisticated environment that facilitates high-level decision-making and hosts international stakeholders.",
+      "team_members": [
+        {
+          "name": "Elena Martinez",
+          "title": "Interior Architect",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Elena%20Martinez&size=100"
+        },
+        {
+          "name": "Jorge Luis",
+          "title": "FF&E Specialist",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Jorge%20Luis&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "bego-ingenieria",
+      "title": "Bego Ingeniería",
+      "client": "Oficinas Gerencias Isan",
+      "year": "2023",
+      "category": "Administrative Office",
+      "displayimage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "Bego Ingeniería required a space that reflected technical precision and collaborative spirit. We designed an open-plan layout punctuated by 'collision zones'—informal meeting areas where engineers can spontaneously brainstorm and share complex drawings.",
+      "description_col2": "The aesthetic is industrial-chic, featuring exposed structural elements and polished concrete floors, softened by acoustic baffles and strategic greenery. This balance promotes a focused yet creative atmosphere essential for modern engineering workflows.",
+      "team_members": [
+        {
+          "name": "Ricardo S.",
+          "title": "Structural Consultant",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Ricardo%20S.&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Spatial Planner",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "coomotor",
+      "title": "Coomotor",
+      "client": "Terminal de Transporte de Cali",
+      "year": "2024",
+      "category": "VIP Lobby",
+      "displayimage": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "The Coomotor VIP Lobby was designed to provide an exclusive, high-comfort experience for travelers. We focused on luxury materials such as marble and soft leathers to create a premium atmosphere that differentiates the brand within the terminal.",
+      "description_col2": "Ergonomic seating arrangements and integrated charging stations ensure that passengers can rest or work effectively. The lighting design uses warm temperatures to create a domestic, welcoming feel in a public transit setting.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Lead Designer",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Ana Sofia",
+          "title": "Lighting Consultant",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Ana%20Sofia&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1493932484895-752d1471eab5?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "marval",
+      "title": "Marval",
+      "client": "Oficinas de Transporte",
+      "year": "2021",
+      "category": "Administrative Office",
+      "displayimage": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "Marval's administrative offices required a layout that optimized workflow between different logistical departments. We utilized glass partitions to maintain visual connectivity while providing the necessary acoustic isolation for focused tasks.",
+      "description_col2": "A clean, minimalist aesthetic with pops of the corporate identity color palette was used to create a professional yet modern environment. The project included a complete overhaul of the ventilation and ergonomic systems.",
+      "team_members": [
+        {
+          "name": "Carlos Gomez",
+          "title": "Project Architect",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Carlos%20Gomez&size=100"
+        },
+        {
+          "name": "Diana P.",
+          "title": "Acoustic Specialist",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Diana%20P.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1497215842964-2229256153f1?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "camara-de-comercio",
+      "title": "Camara de Comercio",
+      "client": "Ciudad de Santander de Quilichao",
+      "year": "2023",
+      "category": "Government Office",
+      "displayimage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "The design for the Camara de Comercio in Santander de Quilichao emphasizes transparency and accessibility. As a government office, the space was planned to facilitate clear public interaction while maintaining secure private zones for administrative work.",
+      "description_col2": "Materials were sourced locally where possible to reflect the regional identity. The centerpiece is a large multi-purpose hall that can transition from daily public service to formal evening events for local business leaders.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Lead Designer",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Felipe R.",
+          "title": "Public Space Consultant",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "banco-de-occidente",
+      "title": "Banco de Occidente",
+      "client": "Entrada Sede Principal",
+      "year": "2024",
+      "category": "Financial Lobby",
+      "displayimage": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "For the Banco de Occidente's main entrance, we focused on architectural grandeur and security. The lobby design uses verticality and high-end stone finishes to project stability and trust—core values of the financial institution.",
+      "description_col2": "The spatial flow was carefully engineered to manage high foot traffic during peak hours, integrating discreet security checkpoints and self-service digital kiosks that don't detract from the luxury aesthetic.",
+      "team_members": [
+        { "name": "Elena Martinez", "title": "Interior Architect" },
+        { "name": "Security Team", "title": "Tech Integration" }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "ingenio-mayaguez",
+      "title": "Ingenio Mayaguez",
+      "client": "Centro Comercial Mayaguez",
+      "year": "2023",
+      "category": "Commercial Space",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "The Ingenio Mayaguez commercial space was designed as a dynamic retail anchor. We used an open-ceiling concept to maximize volume and industrial lighting fixtures to highlight the diverse product displays.",
+      "description_col2": "The floor plan encourages a natural 'journey' through the space, using varied flooring textures and ceiling heights to define different brand zones without the use of restrictive walls.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Lead Designer",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Retail Strategist",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "consultorio-san-fernando",
+      "title": "Consultorio San Fernando",
+      "client": "San Fernando Dental Center",
+      "year": "2023",
+      "category": "Commercial Space",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "The Ingenio Mayaguez commercial space was designed as a dynamic retail anchor. We used an open-ceiling concept to maximize volume and industrial lighting fixtures to highlight the diverse product displays.",
+      "description_col2": "The floor plan encourages a natural 'journey' through the space, using varied flooring textures and ceiling heights to define different brand zones without the use of restrictive walls.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Lead Designer",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Retail Strategist",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "Centro-universidad-autonoma",
+      "title": "Autonoma University Center",
+      "client": "Autonoma de Occidente University",
+      "year": "2023",
+      "category": "Commercial Space",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "The Ingenio Mayaguez commercial space was designed as a dynamic retail anchor. We used an open-ceiling concept to maximize volume and industrial lighting fixtures to highlight the diverse product displays.",
+      "description_col2": "The floor plan encourages a natural 'journey' through the space, using varied flooring textures and ceiling heights to define different brand zones without the use of restrictive walls.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Lead Designer",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Retail Strategist",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "Apartamentos-umbria-garden",
+      "title": "Umbria Garden Apartments",
+      "client": "Umbria Garden Residences",
+      "year": "2024",
+      "category": "Commercial Space",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "The Ingenio Mayaguez commercial space was designed as a dynamic retail anchor. We used an open-ceiling concept to maximize volume and industrial lighting fixtures to highlight the diverse product displays.",
+      "description_col2": "The floor plan encourages a natural 'journey' through the space, using varied flooring textures and ceiling heights to define different brand zones without the use of restrictive walls.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Lead Designer",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Retail Strategist",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "reserva-rio",
+      "title": "River Natural Reserve",
+      "client": "Reserva del Rio",
+      "year": "2023",
+      "category": "Commercial Space",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "The Ingenio Mayaguez commercial space was designed as a dynamic retail anchor. We used an open-ceiling concept to maximize volume and industrial lighting fixtures to highlight the diverse product displays.",
+      "description_col2": "The floor plan encourages a natural 'journey' through the space, using varied flooring textures and ceiling heights to define different brand zones without the use of restrictive walls.",
+      "team_members": [
+        { "name": "Santiago Duque", "title": "Lead Designer" },
+        { "name": "Lucia M.", "title": "Retail Strategist" }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    }
+  ],
+  "ES": [
+    {
+      "id": "expresso-bolivariano",
+      "title": "Expresso Bolivariano",
+      "client": "Terminal de Transporte de Cali",
+      "year": "2023",
+      "category": "Oficina Administrativas",
+      "displayimage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "El proyecto Expresso Bolivariano se centró en redefinir el centro administrativo dentro de la Terminal de Transporte de Cali. Nuestro objetivo fue crear un espacio de trabajo de alto tráfico que mantenga una sensación de calma y eficiencia mediante mobiliario modular y materiales de amortiguación acústica.",
+      "description_col2": "Implementamos una paleta de colores inspirada en la herencia de la marca mientras integramos estándares ergonómicos modernos. El diseño maximiza la penetración de luz natural en plantas profundas, asegurando que el bienestar del personal sea prioridad en un entorno de transporte concurrido.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Diseñador Principal",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Carlos Gomez",
+          "title": "Arquitecto de Proyecto",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Carlos%20Gomez&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "business-center",
+      "title": "Business Center",
+      "client": "Business Center de Cali",
+      "year": "2022",
+      "category": "Oficina Gerenciales",
+      "displayimage": "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "Para el Business Center de Cali, el brief de diseño enfatizó el prestigio y la funcionalidad ejecutiva. Desarrollamos un conjunto de oficinas privadas y salas de juntas que utilizan chapas de madera premium e iluminación personalizada para evocar una sensación de autoridad profesional.",
+      "description_col2": "La integración de tecnología oculta dentro del mobiliario permite presentaciones digitales fluidas sin saturar la estética. El resultado es un entorno sofisticado que facilita la toma de decisiones de alto nivel y recibe a partes interesadas internacionales.",
+      "team_members": [
+        {
+          "name": "Elena Martinez",
+          "title": "Arquitecta de Interiores",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Elena%20Martinez&size=100"
+        },
+        {
+          "name": "Jorge Luis",
+          "title": "Especialista en FF&E",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Jorge%20Luis&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "bego-ingenieria",
+      "title": "Bego Ingeniería",
+      "client": "Oficinas Gerencias Isan",
+      "year": "2023",
+      "category": "Oficina Administrativas",
+      "displayimage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "Bego Ingeniería requería un espacio que reflejara precisión técnica y espíritu colaborativo. Diseñamos un plano abierto puntuado por 'zonas de colisión'—áreas de reunión informales donde los ingenieros pueden intercambiar ideas y compartir planos complejos espontáneamente.",
+      "description_col2": "La estética es industrial-chic, con elementos estructurales expuestos y pisos de concreto pulido, suavizados por deflectores acústicos y vegetación estratégica. Este equilibrio promueve una atmósfera enfocada pero creativa, esencial para los flujos de trabajo de ingeniería moderna.",
+      "team_members": [
+        {
+          "name": "Ricardo S.",
+          "title": "Consultor Estructural",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Ricardo%20S.&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Planificadora Espacial",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "coomotor",
+      "title": "Coomotor",
+      "client": "Terminal de Transporte de Cali",
+      "year": "2024",
+      "category": "Lobby VIP",
+      "displayimage": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "El Lobby VIP de Coomotor fue diseñado para brindar una experiencia exclusiva y de alto confort a los viajeros. Nos centramos en materiales de lujo como mármol y cueros suaves para crear una atmósfera premium que diferencie la marca dentro de la terminal.",
+      "description_col2": "La disposición ergonómica de los asientos y las estaciones de carga integradas aseguran que los pasajeros puedan descansar o trabajar eficazmente. El diseño de iluminación utiliza temperaturas cálidas para crear una sensación doméstica y acogedora en un entorno de transporte público.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Diseñador Principal",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Ana Sofia",
+          "title": "Consultora de Iluminación",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Ana%20Sofia&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1493932484895-752d1471eab5?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "marval",
+      "title": "Marval",
+      "client": "Oficinas de Transporte",
+      "year": "2021",
+      "category": "Oficina Administrativas",
+      "displayimage": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "Las oficinas administrativas de Marval requerían un diseño que optimizara el flujo de trabajo entre diferentes departamentos logísticos. Utilizamos particiones de vidrio para mantener la conectividad visual mientras proporcionamos el aislamiento acústico necesario para tareas enfocadas.",
+      "description_col2": "Se utilizó una estética limpia y minimalista con toques de la paleta de colores de la identidad corporativa para crear un ambiente profesional pero moderno. El proyecto incluyó una revisión completa de los sistemas de ventilación y ergonomía.",
+      "team_members": [
+        {
+          "name": "Carlos Gomez",
+          "title": "Arquitecto de Proyecto",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Carlos%20Gomez&size=100"
+        },
+        {
+          "name": "Diana P.",
+          "title": "Especialista Acústica",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Diana%20P.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1497215842964-2229256153f1?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "camara-de-comercio",
+      "title": "Camara de Comercio",
+      "client": "Ciudad de Santander de Quilichao",
+      "year": "2023",
+      "category": "Oficina Gubernamentale",
+      "displayimage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "El diseño para la Cámara de Comercio en Santander de Quilichao enfatiza la transparencia y accesibilidad. Como oficina gubernamental, el espacio se planificó para facilitar una clara interacción pública manteniendo zonas privadas seguras para el trabajo administrativo.",
+      "description_col2": "Los materiales se obtuvieron localmente donde fue posible para reflejar la identidad regional. La pieza central es un gran salón de usos múltiples que puede transicionar del servicio público diario a eventos nocturnos formales para líderes empresariales locales.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Diseñador Principal",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Felipe R.",
+          "title": "Consultor de Espacio Público",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Felipe%20R.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "banco-de-occidente",
+      "title": "Banco de Occidente",
+      "client": "Entrada Sede Principal",
+      "year": "2024",
+      "category": "Vestíbulo Financiero",
+      "displayimage": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "Para la entrada principal del Banco de Occidente, nos enfocamos en la grandeza arquitectónica y la seguridad. El diseño del vestíbulo utiliza verticalidad y acabados de piedra de alta gama para proyectar estabilidad y confianza—valores centrales de la institución financiera.",
+      "description_col2": "El flujo espacial fue cuidadosamente diseñado para gestionar el alto tráfico peatonal durante las horas pico, integrando puntos de control de seguridad discretos y quioscos digitales de autoservicio que no restan valor a la estética de lujo.",
+      "team_members": [
+        {
+          "name": "Elena Martinez",
+          "title": "Arquitecta de Interiores",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Elena%20Martinez&size=100"
+        },
+        {
+          "name": "Equipo de Seguridad",
+          "title": "Integración Tecnológica",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Equipo%20de%20Seguridad&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "ingenio-mayaguez",
+      "title": "Ingenio Mayaguez",
+      "client": "Centro Comercial Mayaguez",
+      "year": "2023",
+      "category": "Espacio Comercial",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "El espacio comercial de Ingenio Mayaguez fue diseñado como un ancla minorista dinámica. Utilizamos un concepto de techo abierto para maximizar el volumen y accesorios de iluminación industrial para resaltar las diversas exhibiciones de productos.",
+      "description_col2": "El plano del piso fomenta un 'viaje' natural a través del espacio, utilizando texturas de piso variadas y alturas de techo para definir diferentes zonas de marca sin el uso de paredes restrictivas.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Diseñador Principal",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Estratega Minorista",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "consultorio-san-fernando",
+      "title": "Consultorio San Fernando",
+      "client": "San Fernando Odontología",
+      "year": "2025",
+      "category": "Consultorio Odontológico",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "El espacio comercial de Ingenio Mayaguez fue diseñado como un ancla minorista dinámica. Utilizamos un concepto de techo abierto para maximizar el volumen y accesorios de iluminación industrial para resaltar las diversas exhibiciones de productos.",
+      "description_col2": "El plano del piso fomenta un 'viaje' natural a través del espacio, utilizando texturas de piso variadas y alturas de techo para definir diferentes zonas de marca sin el uso de paredes restrictivas.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Diseñador Principal",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Estratega Minorista",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "Centro-universidad-autonoma",
+      "title": "Centro Universidad Autónoma",
+      "client": "Universidad Autónoma de Occidente",
+      "year": "2023",
+      "category": "Mesa de Negocios",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "El espacio comercial de Ingenio Mayaguez fue diseñado como un ancla minorista dinámica. Utilizamos un concepto de techo abierto para maximizar el volumen y accesorios de iluminación industrial para resaltar las diversas exhibiciones de productos.",
+      "description_col2": "El plano del piso fomenta un 'viaje' natural a través del espacio, utilizando texturas de piso variadas y alturas de techo para definir diferentes zonas de marca sin el uso de paredes restrictivas.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Diseñador Principal",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Estratega Minorista",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "Apartamentos-umbria-garden",
+      "title": "Apartamentos Umbria Garden",
+      "client": "Residencias Umbria Garden",
+      "year": "2023",
+      "category": "Diseño de Apartamentos",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "El espacio comercial de Ingenio Mayaguez fue diseñado como un ancla minorista dinámica. Utilizamos un concepto de techo abierto para maximizar el volumen y accesorios de iluminación industrial para resaltar las diversas exhibiciones de productos.",
+      "description_col2": "El plano del piso fomenta un 'viaje' natural a través del espacio, utilizando texturas de piso variadas y alturas de techo para definir diferentes zonas de marca sin el uso de paredes restrictivas.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Diseñador Principal",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Estratega Minorista",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    },
+    {
+      "id": "reserva-rio",
+      "title": "Reserva del Río",
+      "client": "Reserva Natural del Río",
+      "year": "2023",
+      "category": "Diseño de Espacio Interior",
+      "displayimage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+      "description_col1": "El espacio comercial de Ingenio Mayaguez fue diseñado como un ancla minorista dinámica. Utilizamos un concepto de techo abierto para maximizar el volumen y accesorios de iluminación industrial para resaltar las diversas exhibiciones de productos.",
+      "description_col2": "El plano del piso fomenta un 'viaje' natural a través del espacio, utilizando texturas de piso variadas y alturas de techo para definir diferentes zonas de marca sin el uso de paredes restrictivas.",
+      "team_members": [
+        {
+          "name": "Santiago Duque",
+          "title": "Diseñador Principal",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Santiago%20Duque&size=100"
+        },
+        {
+          "name": "Lucia M.",
+          "title": "Estratega Minorista",
+          "image": "https://api.dicebear.com/7.x/notionavatar/svg?seed=Lucia%20M.&size=100"
+        }
+      ],
+      "accordionimages": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+      ]
+    }
+  ]
+}
