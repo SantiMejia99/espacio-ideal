@@ -193,9 +193,10 @@ const ProjectAccordion = () => {
             onPointerLeave={handlePointerLeave}
           >
             <AccordionTrigger className="hover:no-underline py-4 text-sm [&>svg]:hidden">
-              <div className="flex flex-col md:flex-row w-full items-center">
-                <div className="flex-1 font-bold text-left text-base md:text-base transition-transform duration-300 group-hover/item:translate-x-0.5">
+              <div className="flex flex-col md:flex-row w-full items-start md:items-center">
+                <div className="w-full md:flex-1 font-bold text-left text-base md:text-base transition-transform duration-300 group-hover/item:translate-x-0.5 flex justify-between md:block">
                   {project.client}
+                  <ArrowDown className="h-5 w-5 md:hidden inline-block transition-transform duration-300 group-data-[state=open]:rotate-180" />
                 </div>
                 <div className="flex-1 text-left text-neutral-600">
                   {project.category}
@@ -203,7 +204,7 @@ const ProjectAccordion = () => {
                 <div className="flex-[0.5] md:flex-[0.25] text-left text-neutral-600">
                   {project.year}
                 </div>
-                <div className="flex-[0.5] md:flex-[0.25] text-right">
+                <div className="flex-[0.5] md:flex-[0.25] justify-end hidden md:flex">
                   <ArrowDown className="h-5 w-5 inline-block transition-transform duration-300 group-data-[state=open]:rotate-180" />
                 </div>
               </div>

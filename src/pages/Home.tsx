@@ -16,7 +16,7 @@ const Home = () => {
         </section>
 
         {/* SECOND SCREEN */}
-        <section className="min-h-screen w-full flex flex-col bg-white pt-20">
+        <section className="min-h-screen w-full flex flex-col bg-white pt-24">
           <ProjectAccordion />
         </section>
       </main>
