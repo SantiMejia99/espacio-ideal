@@ -126,7 +126,7 @@ const ProjectAccordion = () => {
   const text = labels[language as keyof typeof labels] || labels["EN"];
 
   return (
-    <section className="relative mt-20 mb-40 px-4 sm:px-8 mx-0 sm:mx-8 pb-40">
+    <section className="relative mt-20 mb-40 px-4 sm:px-8 mx-0 sm:mx-8 pb-24">
       {/* Floating Hover Image Preview */}
       <AnimatePresence>
         {hoveredId && activeProject && hoveredId !== expandedValue && (

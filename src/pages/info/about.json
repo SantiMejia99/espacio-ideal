@@ -1,0 +1,104 @@
+{
+  "EN": {
+    "founder": {
+      "name": "Alberto Mejia.",
+      "title": "(Founder & Architect)",
+      "bio1": "Alberto blends business sense with creative instinct, using both to build brands that actually connect. With a background in marketing, design, and leadership, he's known for spotting clarity in the chaos — then charting the course forward.",
+      "bio2": "He's most in his element collaborating with smart, curious people and shaping work that feels as good as it looks. When he's not deep in the details, you'll probably find him on a basketball court — with a tight handle and a smooth jumper."
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "alberto.mejia@espacioideal.com",
+      "phone": "+ 51 519 258 2365"
+    },
+    "services": {
+      "title": "Services",
+      "list": [
+        "Architecture",
+        "Interior Design",
+        "Industrial Design",
+        "Custom Pieces",
+        "Space",
+        "Creative & Art Direction",
+        "Concept & Strategy",
+        "Consultancy & Research"
+      ]
+    },
+    "awards": {
+      "title": "Awards",
+      "list": [
+        "Rising Talent Award (Paris, FR)",
+        "Archiproducts Design (Milan, ITA)",
+        "Wirtschaftspreis (Sindelfingen, GER)",
+        "Deutscher Designer (Frankfurt, GER)",
+        "German Design (Frankfurt, GER)",
+        "Ein&Zwanzig Award (Frankfurt, GER)",
+        "AED Neuland (Stuttgart, GER)",
+        "Mia Seeger (Stuttgart, GER)",
+        "Interprint (Łódź, POL)",
+        "Paradyz (Łódź, POL)"
+      ]
+    },
+    "office": {
+      "title": "Office",
+      "address": "Carrera 20A. No. 23-70, Cali Colombia"
+    },
+    "tagline": {
+      "main": "We design with weight.",
+      "sub1": "Architecture",
+      "sub2": "Interior",
+      "sub3": "without compromise."
+    }
+  },
+  "ES": {
+    "founder": {
+      "name": "Alberto Mejia.",
+      "title": "(Fundador y Arquitecto)",
+      "bio1": "Alberto combina sentido de negocios con instinto creativo, usando ambos para construir marcas que realmente conectan. Con experiencia en marketing, diseño y liderazgo, es conocido por encontrar claridad en el caos — y luego trazar el camino a seguir.",
+      "bio2": "Está en su elemento colaborando con personas inteligentes y curiosas, dando forma a trabajos que se sienten tan bien como se ven. Cuando no está en los detalles, probablemente lo encuentres en una cancha de baloncesto — con un buen manejo y un tiro suave."
+    },
+    "contact": {
+      "title": "Contacto",
+      "email": "alberto.mejia@espacioideal.com",
+      "phone": "+ 51 519 258 2365"
+    },
+    "services": {
+      "title": "Servicios",
+      "list": [
+        "Arquitectura",
+        "Diseño de Interiores",
+        "Diseño Industrial",
+        "Piezas Personalizadas",
+        "Espacio",
+        "Dirección Creativa y de Arte",
+        "Concepto y Estrategia",
+        "Consultoría e Investigación"
+      ]
+    },
+    "awards": {
+      "title": "Premios",
+      "list": [
+        "Rising Talent Award (París, FR)",
+        "Archiproducts Design (Milán, ITA)",
+        "Wirtschaftspreis (Sindelfingen, GER)",
+        "Deutscher Designer (Frankfurt, GER)",
+        "German Design (Frankfurt, GER)",
+        "Ein&Zwanzig Award (Frankfurt, GER)",
+        "AED Neuland (Stuttgart, GER)",
+        "Mia Seeger (Stuttgart, GER)",
+        "Interprint (Łódź, POL)",
+        "Paradyz (Łódź, POL)"
+      ]
+    },
+    "office": {
+      "title": "Oficina",
+      "address": "Carrera 20A. No. 23-70, Cali Colombia"
+    },
+    "tagline": {
+      "main": "Diseñamos con peso.",
+      "sub1": "Arquitectura",
+      "sub2": "Interior",
+      "sub3": "sin compromisos."
+    }
+  }
+}

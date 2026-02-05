@@ -34,16 +34,16 @@ const About = () => {
       awards: {
         title: "Awards",
         list: [
-          "Rising Talent Award (Paris, FR)",
-          "Archiproducts Design (Milan, ITA)",
-          "Wirtschaftspreis (Sindelfingen, GER)",
-          "Deutscher Designer (Frankfurt, GER)",
-          "German Design (Frankfurt, GER)",
-          "Ein&Zwanzig Award (Frankfurt, GER)",
-          "AED Neuland (Stuttgart, GER)",
-          "Mia Seeger (Stuttgart, GER)",
-          "Interprint (Łódź, POL)",
-          "Paradyz (Łódź, POL)",
+          "Rising Talent Award (París)",
+          "Archiproducts Design (Milán)",
+          "Wirtschaftspreis (Sindelfingen)",
+          "Deutscher Designer (Frankfurt)",
+          "German Design (Frankfurt)",
+          "Ein&Zwanzig Award (Frankfurt)",
+          "AED Neuland (Stuttgart)",
+          "Mia Seeger (Stuttgart)",
+          "Interprint (Łódź)",
+          "Paradyz (Łódź)",
         ],
       },
       office: {
@@ -85,16 +85,16 @@ const About = () => {
       awards: {
         title: "Premios",
         list: [
-          "Rising Talent Award (París, FR)",
-          "Archiproducts Design (Milán, ITA)",
-          "Wirtschaftspreis (Sindelfingen, GER)",
-          "Deutscher Designer (Frankfurt, GER)",
-          "German Design (Frankfurt, GER)",
-          "Ein&Zwanzig Award (Frankfurt, GER)",
-          "AED Neuland (Stuttgart, GER)",
-          "Mia Seeger (Stuttgart, GER)",
-          "Interprint (Łódź, POL)",
-          "Paradyz (Łódź, POL)",
+          "Rising Talent Award (París)",
+          "Archiproducts Design (Milán)",
+          "Wirtschaftspreis (Sindelfingen)",
+          "Deutscher Designer (Frankfurt)",
+          "German Design (Frankfurt)",
+          "Ein&Zwanzig Award (Frankfurt)",
+          "AED Neuland (Stuttgart)",
+          "Mia Seeger (Stuttgart)",
+          "Interprint (Łódź)",
+          "Paradyz (Łódź)",
         ],
       },
       office: {
@@ -118,7 +118,7 @@ const About = () => {
         {/* Three Column Layout for Desktop, Single Column for Mobile */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 px-4 sm:px-8 mx-0 sm:mx-8">
           {/* First Column - Introductory Text */}
-          <div className="space-y-4 text-[15px] leading-relaxed">
+          <div className="space-y-4 text-base leading-relaxed">
             <p>
               The upholstered wall hook creates a reduced, horizontal storage
               platform and offers the possibility to attach objects to a wall
@@ -151,52 +151,55 @@ const About = () => {
 
           {/* Second Column - About & Contact */}
           <div className="space-y-12">
-            {/* About Section */}
+            {/* Header Section */}
             <div>
-              <div className="border-t border-black pt-4 mb-6">
-                <h2 className="text-sm font-medium mb-8">About</h2>
-              </div>
-              <div className="space-y-4">
-                <div className="flex justify-between items-baseline">
-                  <h3 className="text-2xl font-normal">
+              <div className="space-y-1 mb-6 pb-4">
+                <div className="border-t border-black"></div>
+                <div className="flex justify-between items-starts">
+                  <h3 className="text-xl font-bold">
                     {content[language].founder.name}
                   </h3>
                   <span className="text-sm">
                     {content[language].founder.title}
                   </span>
                 </div>
-                <div className="border-t border-black"></div>
               </div>
-              <div className="mt-6 space-y-4 text-[15px] leading-relaxed">
-                <p>{content[language].founder.bio1}</p>
-                <p>{content[language].founder.bio2}</p>
+              {/* About Section */}
+              <div className="space-y-1 mb-6 pb-4">
+                <div className="border-t border-black mb-4">
+                  <h2 className="text-l pt-2 font-bold">About</h2>
+                </div>
+                <div className="space-y-4 text-base leading-relaxed">
+                  <p>{content[language].founder.bio1}</p>
+                  <p>{content[language].founder.bio2}</p>
+                </div>
               </div>
-            </div>
-
-            {/* Contact Section */}
-            <div>
-              <div className="border-t border-black pt-4 mb-6">
-                <h2 className="text-sm font-medium">
-                  {content[language].contact.title}
-                </h2>
-              </div>
-              <div className="space-y-2 text-[15px]">
-                <p>{content[language].contact.email}</p>
-                <p>{content[language].contact.phone}</p>
+              {/* Contact Section */}
+              <div className="space-y-1 mb-6">
+                <div className="border-t border-black mb-4">
+                  <h2 className="text-l pt-2 font-bold">
+                    {content[language].contact.title}
+                  </h2>
+                </div>
+                <div className="space-y-1 text-base leading-relaxed">
+                  <p>{content[language].contact.email}</p>
+                  <p>{content[language].contact.phone}</p>
+                  <p>{content[language].office.address}</p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Third Column - Services, Awards, Office */}
-          <div className="space-y-12">
+          <div className="space-y-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
             {/* Services Section */}
-            <div>
-              <div className="border-t border-black pt-4 mb-6">
-                <h2 className="text-sm font-medium">
+            <div className="mb-6 pb-4">
+              <div>
+                <h2 className="text-l font-normal mb-4">
                   {content[language].services.title}
                 </h2>
               </div>
-              <div className="space-y-1 text-[15px]">
+              <div className="space-y-1 text-2xl font-bold leading-7">
                 {content[language].services.list.map((service, index) => (
                   <p key={index}>{service}</p>
                 ))}
@@ -205,102 +208,97 @@ const About = () => {
 
             {/* Awards Section */}
             <div>
-              <div className="border-t border-black pt-4 mb-6">
-                <h2 className="text-sm font-medium">
+              <div>
+                <h2 className="text-l font-normal mb-4">
                   {content[language].awards.title}
                 </h2>
               </div>
-              <div className="space-y-1 text-[15px]">
+              <div className="space-y-1 text-2xl font-bold leading-7">
                 {content[language].awards.list.map((award, index) => (
                   <p key={index}>{award}</p>
                 ))}
               </div>
             </div>
-
-            {/* Office Section */}
-            <div>
-              <div className="border-t border-black pt-4 mb-6">
-                <h2 className="text-sm font-medium">
-                  {content[language].office.title}
-                </h2>
-              </div>
-              <p className="text-[15px]">{content[language].office.address}</p>
-            </div>
           </div>
         </div>
-        {/* Venn Diagram - Full Width Below Columns */}
-        <div className="mt-20 px-4 sm:px-8 mx-0 sm:mx-8">
-          <svg
-            viewBox="0 0 800 400"
-            className="w-full max-w-3xl mx-auto"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* Left Circle - Design */}
-            <circle
-              cx="280"
-              cy="200"
-              r="180"
-              fill="none"
-              stroke="black"
-              strokeWidth="2"
-            />
-            {/* Right Circle - Function */}
-            <circle
-              cx="520"
-              cy="200"
-              r="180"
-              fill="none"
-              stroke="black"
-              strokeWidth="2"
-            />
-            {/* Intersection - filled black */}
-            <path
-              d="M 400 20 A 180 180 0 0 1 400 380 A 180 180 0 0 1 400 20 Z"
-              fill="black"
-            />
 
-            {/* Labels */}
-            <text
-              x="220"
-              y="210"
-              fontSize="18"
-              fontFamily="system-ui, -apple-system, sans-serif"
-              textAnchor="middle"
+        {/* Diagram & Slogan */}
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+          {/* Tagline - Full Width Below Diagram */}
+          <div className="mt-20 px-4 sm:px-8 sm:mx-8 bg-amber-300">
+            <h2 className="text-4xl lg:text-6xl font-medium leading-16 text-left">
+              {content[language].tagline.main}
+              <br />
+              <span className="italic">
+                {content[language].tagline.sub1}
+              </span>{" "}
+              and{" "}
+              <span className="italic">{content[language].tagline.sub2}</span>{" "}
+              {content[language].tagline.sub3}
+            </h2>
+          </div>
+          {/* Bubble Diagram */}
+          <div className="mt-20 sm:px-8 mx-0 sm:mx-8 bg-amber-600">
+            <svg
+              viewBox="0 0 800 400"
+              className="w-full max-w-3xl mx-auto"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Design.
-            </text>
-            <text
-              x="400"
-              y="210"
-              fontSize="18"
-              fontFamily="system-ui, -apple-system, sans-serif"
-              textAnchor="middle"
-              fill="white"
-            >
-              Us.
-            </text>
-            <text
-              x="580"
-              y="210"
-              fontSize="18"
-              fontFamily="system-ui, -apple-system, sans-serif"
-              textAnchor="middle"
-            >
-              Function.
-            </text>
-          </svg>
-        </div>
-        {/* Tagline - Full Width Below Diagram */}
-        <div className="mt-20 px-4 sm:px-8 mx-0 sm:mx-8">
-          <h2 className="text-4xl lg:text-6xl font-normal leading-tight text-right max-w-5xl ml-auto">
-            {content[language].tagline.main}
-            <br />
-            <span className="italic">
-              {content[language].tagline.sub1}
-            </span> and{" "}
-            <span className="italic">{content[language].tagline.sub2}</span>{" "}
-            {content[language].tagline.sub3}
-          </h2>
+              {/* Left Circle - Design */}
+              <circle
+                cx="280"
+                cy="200"
+                r="180"
+                fill="none"
+                stroke="black"
+                strokeWidth="2"
+              />
+              {/* Right Circle - Function */}
+              <circle
+                cx="520"
+                cy="200"
+                r="180"
+                fill="none"
+                stroke="black"
+                strokeWidth="2"
+              />
+              {/* Intersection - filled black */}
+              <path
+                d="M 400 20 A 180 180 0 0 1 400 380 A 180 180 0 0 1 400 20 Z"
+                fill="black"
+              />
+
+              {/* Labels */}
+              <text
+                x="220"
+                y="210"
+                fontSize="18"
+                fontFamily="system-ui, -apple-system, sans-serif"
+                textAnchor="middle"
+              >
+                Design.
+              </text>
+              <text
+                x="400"
+                y="210"
+                fontSize="18"
+                fontFamily="system-ui, -apple-system, sans-serif"
+                textAnchor="middle"
+                fill="white"
+              >
+                Us.
+              </text>
+              <text
+                x="580"
+                y="210"
+                fontSize="18"
+                fontFamily="system-ui, -apple-system, sans-serif"
+                textAnchor="middle"
+              >
+                Function.
+              </text>
+            </svg>
+          </div>
         </div>
       </main>
 
